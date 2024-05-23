@@ -1,0 +1,8 @@
+
+<div class="container">
+<div class="container d-flex justify-content-center">
+        <img src="<?php echo  base_url('gambar/kegiatan/25042024.jpeg') ?>" alt="" width ="100%">
+    </div>
+    <h1>KUNJUNGAN RA An Nur</h1>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. At recusandae officiis, error, architecto non dignissimos asperiores sint eos pariatur praesentium fuga dolore neque unde. Quis debitis accusamus fugiat earum provident? Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam eos adipisci cupiditate error enim, quae eum laborum placeat repudiandae illo? Nihil earum, at error velit voluptas excepturi ipsa praesentium labore?</p>
+</div>
