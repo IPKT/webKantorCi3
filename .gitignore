@@ -33,6 +33,7 @@ user_guide_src/cilexer/pycilexer.egg-info/*
 
 ##abaikan file config
 ## abaikan file config
+## baca ini https://sigalambigha.home.blog/2020/03/11/how-to-refresh-gitignore/
 application/config/config.php
 application/config/database.php
 

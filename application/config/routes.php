@@ -55,4 +55,5 @@ $route['translate_uri_dashes'] = FALSE;
 $route['(:any)'] = 'web/$1';
 $route['artikel/(:any)'] = 'web/artikel/$1';
 $route['kegiatan/(:any)'] = 'web/kegiatan/$1';
+$route['listBuletin/(:any)'] = 'web/listBuletin/$1';
 // $route['simpan_gempapgr3'] = 'web/simpan2';
