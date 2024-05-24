@@ -11,10 +11,9 @@
     <link href="<?php echo base_url('bootstrap/')?>css/bootstrap.min.css" rel="stylesheet" />
     <!-- Bootstrap Font Icon CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"> -->
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"> -->
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="<?php echo base_url('style.css') ?>" />
+    <link rel="stylesheet" href="<?php echo  base_url('style.css') ?>" />
 
     <!-- bootstrap js-->
 
@@ -45,7 +44,7 @@
     </style>
 
     <title>Geofisika Denpasar</title>
-    <link rel="icon" type="image/x-icon" href="<?php echo base_url('gambar/logo bmkg.png') ?>">
+    <link rel="icon" type="image/x-icon" href="<?php echo  base_url('gambar/logo bmkg.png') ?>">
 </head>
 
 <body onload=display_jam()>
@@ -62,17 +61,31 @@
             <div class="col-lg-4">
                 <div class="container">
                     <?php
-                    $data = simplexml_load_file("https://data.bmkg.go.id/DataMKG/TEWS/autogempa.xml") or die("Gagal mengakses!");
-                    $shakemap = $data->gempa->Shakemap;
+                    // $data = simplexml_load_file("https://data.bmkg.go.id/DataMKG/TEWS/autogempa.xml") or die("Gagal mengakses!");
+                    // $shakemap = $data->gempa->Shakemap;
+                    $srcShakemap="";
+                    $shakemap = "";
+                    // $db = \Config\Database::connect();
+                    $this->load->database();
+                    $query = $this->db->query('SELECT id_shakemap FROM gempabali ORDER BY id DESC LIMIT 1');
+                    $results   = $query->row();
+                    if($results->id_shakemap ==NULL or $results->id_shakemap == "" ){
+                        $data = simplexml_load_file("https://data.bmkg.go.id/DataMKG/TEWS/autogempa.xml") or die("Gagal mengakses!");
+                        $shakemap = $data->gempa->Shakemap;
+                        $srcShakemap="https://data.bmkg.go.id/DataMKG/TEWS/".$shakemap;
+                    } else{
+                        $shakemap = $results->id_shakemap;
+                        $srcShakemap = "https://pgt.bmkg.go.id/assets/pgr3_peta/".$shakemap.".png";
+                    }
+                    
                     ?>
                     <div class="card">
                         <div class="card-header" style="background-color:#343f52; color: white;">
-                            <h5>ShakeMap Gempa Dirasakan</h5>
+                            <h5>Peta Gempa Terkini</h5>
                         </div>
                         <div class="card-body">
-                            <div class="col-lg-12 gempa-map"><img
-                                    src="https://data.bmkg.go.id/DataMKG/TEWS/<?php echo  $shakemap ?>" width="100%"
-                                    alt=""></div>
+                            <div class="col-lg-12 gempa-map"><img src="<?php echo $srcShakemap?>" width="100%"
+                                    alt="informasi gempa bumi region 3"></div>
                         </div>
                     </div>
                 </div>
