@@ -38,7 +38,7 @@ class Web extends CI_Controller {
 		$data = array(
 			'page' => 'profil/visi',
 		);
-		$this->load->view('layout/template',$data,false);	
+		$this->load->view('layout/coba',$data,false);	
 	}
 
 	public function sejarah(){
