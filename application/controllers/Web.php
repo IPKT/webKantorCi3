@@ -101,34 +101,37 @@ class Web extends CI_Controller {
 		$this->load->view('layout/template',$data,false);	
 	}
 
+	// Publikasi
+	public function buletin(){
+		$data = array(
+			'page' => 'publikasi/buletin',
+		);
+		$this->load->view('layout/template',$data,false);	
+	}
+
+	public function listBuletin($bulan){
+		$data = array(
+			'page' => 'publikasi/buletin/'.$bulan,
+		);
+		$this->load->view('layout/template',$data,false);	
+	}
+
+	public function listArtikel(){
+		$data = array(
+			'page' => 'artikel/listArtikel/'.$bulan,
+		);
+		$this->load->view('layout/template',$data,false);	
+	}
+
+
 	//SIMPAN DATA GEMPA
 	public function simpan2(){
-        // $request = \Config\Services::request();
-        // // $nilai= $this->input->post('gempa');
-        // $nilai = $request->getPost('gempa');
-
 		$nilai = $this->input->post('gempa');
         $nilai = explode("==",$nilai);
         $data = array(
 
             'id'  => $nilai[0],
             'infogempa'   => $nilai[1],
-            
-
-            // 'hostname'  => $this->input->get(''),
-            // 'ipv4'   => $this->input->get('ipv4'),
-            // 'ip_public'   => $this->input->get('ip_public'),
-            // 'waktu_local'   => $this->input->get('waktu_local'),
-            // 'sistem'   => $this->input->get('sistem'),
-            // 'processor'   => $this->input->get('processor'),
-            // 'boot_time'   => $this->input->get('boot_time'),
-            // 'cpu_usage'   => $this->input->get('cpu_usage'),
-            // 'memory_total'   => $this->input->get('memory_total'),
-            // 'memory_usage'   => $this->input->get('memory_usage'),
-            // 'memory_usage_persen'   => $this->input->get('memory_usage_persen'),
-            // 'disk_size'   => $this->input->get('disk_size'),
-            // 'disk_partisi'   => $this->input->get('disk_partisi'),
-            // 'disk_usage_persen'   => $this->input->get('disk_usage_persen'), 
         );
 
         $id = $nilai[0];
@@ -145,20 +148,6 @@ class Web extends CI_Controller {
         } else {
             $query2 = $this->db->query("INSERT INTO $tabel (id,infogempa,id_shakemap) VALUES ('$id','$event','$id_shakemap')");
         }
-        // $hostname = array('hostname'=> $nilai[0]);
-        // $cek_data = $this->m_komputer->ambil_data($hostname, 'profile_komputer')->result();
-        // if ($cek_data == NULL) {
-        //     $this->m_komputer->input_data($data,'profile_komputer');
-        // } else {
-        //     $this->m_komputer->update_data($data,'profile_komputer');
-        // } 
-        
-        // $this->m_komputer->input_data($data,'real_time_2');
-
-        // redirect('ip_web/index'); 
-		// $this->response("wakwow");
-        // return "hay";
-
 		echo "hahaha";
     }
 
