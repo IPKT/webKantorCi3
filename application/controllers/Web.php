@@ -30,7 +30,8 @@ class Web extends CI_Controller {
 		$data = array(
 			'page' => 'profil/beranda',
 		);
-		$this->load->view('layout/template_beranda',$data,false);	
+		$this->load->view('layout/template_beranda',$data,false);
+		// $this->load->view('layout/coba',$data,false);	
 	}
 
 	//PROFILE KANTOR
@@ -38,7 +39,7 @@ class Web extends CI_Controller {
 		$data = array(
 			'page' => 'profil/visi',
 		);
-		$this->load->view('layout/coba',$data,false);	
+		$this->load->view('layout/template',$data,false);	
 	}
 
 	public function sejarah(){

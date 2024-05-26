@@ -1,4 +1,4 @@
-<div class="container mt-2">
+<div data-aos="zoom-in" class="container mt-2">
     <div class="card">
         <div class="card-header" style="background-color:#343f52; color: white;">
             <h5>Press Release / Artikel <a href="<?php echo base_url('listArtikel') ?>"

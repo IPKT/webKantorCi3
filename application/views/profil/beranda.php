@@ -112,7 +112,7 @@
         </div>
     </div>
 </div>
-<div class="container-fluid" id="container-layanan">
+<div data-aos="zoom-in" class="container-fluid" id="container-layanan">
     <div>
         <h5 id="judul-layanan">Layanan</h5>
     </div>
