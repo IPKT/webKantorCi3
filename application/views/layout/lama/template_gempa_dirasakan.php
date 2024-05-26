@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="<?= base_url('style.css') ?>"/>
+    <link rel="stylesheet" href="<?php echo  base_url('style.css') ?>"/>
 
     <!-- bootstrap js-->
     
@@ -41,15 +41,19 @@ p {
     </style>
 
     <title>Geofisika Denpasar</title>
-    <link rel="icon" type="image/x-icon" href="<?= base_url('gambar/logo bmkg.png') ?>">
+    <link rel="icon" type="image/x-icon" href="<?php echo  base_url('gambar/logo bmkg.png') ?>">
 </head>
 <body onload = display_jam()>
-<?= $this->include('Layout/navbar') ?>
+<?php $this->load->view('layout/navbar'); ?>
         
 <div class="container mb-3">
     <div class="row content mt-2">
         <div class="col-lg-8">
-        <?= $this->renderSection('content') ?>
+        <?php 
+                 if ($page) {
+                    $this->load->view($page);
+                 }
+                 ?>
         </div>
         <div class="col-lg-4">
             <div class="container">
@@ -58,9 +62,10 @@ p {
                     // $shakemap = $data->gempa->Shakemap;
                     $srcShakemap="";
                     $shakemap = "";
-                    $db = \Config\Database::connect();
-                    $query = $db->query('SELECT id FROM gempabalidirasakan ORDER BY id DESC LIMIT 1');
-                    $results   = $query->getRow();
+                    // $db = \Config\Database::connect();
+                    $this->load->database();
+                    $query = $this->db->query('SELECT id FROM gempabalidirasakan ORDER BY id DESC LIMIT 1');
+                    $results   = $query->row();
                     if($results->id ==NULL or $results->id == "" ){
                         $data = simplexml_load_file("https://data.bmkg.go.id/DataMKG/TEWS/autogempa.xml") or die("Gagal mengakses!");
                         $shakemap = $data->gempa->Shakemap;
@@ -74,11 +79,11 @@ p {
                 <div class="card">
                     <div class="card-header" style="background-color:#343f52; color: white;"><h5>ShakeMap Gempa Dirasakan</h5></div>
                     <div class="card-body">
-                             <div class="col-lg-12 gempa-map"><img src="<?=$srcShakemap?>" width="100%" alt="informasi gempa bumi region 3"></div>
+                             <div class="col-lg-12 gempa-map"><img src="<?php echo $srcShakemap?>" width="100%" alt="informasi gempa bumi region 3"></div>
                     </div>      
                 </div>
             </div>
-            <?= $this->include('Layout/press_release') ?>
+            <?php $this->load->view('layout/press_release') ?>
             <div class="container mt-2">
             <?php
                     $data = simplexml_load_file("https://data.bmkg.go.id/DataMKG/TEWS/autogempa.xml") or die("Gagal mengakses!");
@@ -94,12 +99,6 @@ p {
         </div>
     </div>
 </div>
-
-
-
-
-
-        <p><?= $this->renderSection('content') ?></p>
 
         <div class="container-fluid">
             <div class="row" id="footer-info">

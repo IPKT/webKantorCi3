@@ -1,4 +1,4 @@
-<div class="container-fluid" style="background-color:#343f52; color: white;">
+<div data-aos="zoom-in" class="container-fluid" style="background-color:#343f52; color: white;">
     <div class="container">
         <footer class="py-2">
             <div class="row mt-3 mb-5">
