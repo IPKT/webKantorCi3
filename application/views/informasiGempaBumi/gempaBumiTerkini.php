@@ -1,22 +1,27 @@
+<div class="card">
+    <div class="card-header" style="background-color:#343f52; color: white;">
+        <div>
+            <h5>Gempa Bumi Terkini Wilayah Bali</h5>
+        </div>
+    </div>
+    <div class="card-body">
+        <div class="container">
+            <div id="map" class="map" style="width: 100%; height: 500px;"></div>
 
-<div class="container">
-    <h3>GEMPA BUMI TERKINI WILAYAH BALI</h3>
-    <div id="map" class="map" style="width: 100%; height: 500px;"></div>
-               
-    <div class="table-responsive">
-        <table class="table table-hover table-striped">
-        <thead>
-            <tr class="text-center">
-                <th>No</th>
-                <th>Waktu Gempa</th>
-                <th>Koordinat</th>
-                <th>Magnitudo</th>
-                <th>Kedalaman</th>
-                <th>Wilayah</th>
-            </tr>
-        </thead>
-        <tbody>
-        <?php 
+            <div class="table-responsive">
+                <table class="table table-bordered table-hover table-striped small" id="tabelGempaTerkini">
+                    <thead>
+                        <tr class="text-center">
+                            <th>No</th>
+                            <th>Waktu Gempa</th>
+                            <th>Koordinat</th>
+                            <th>Magnitudo</th>
+                            <th>Kedalaman</th>
+                            <th>Wilayah</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php 
         // $db = \Config\Database::connect();
         $this->load->database();
         $query = $this->db->query('SELECT infogempa FROM gempabali ORDER BY id DESC LIMIT 20');
@@ -24,23 +29,25 @@
         $no = 1;
         foreach ($results as $row):
             list($waktu,$lintang,$bujur,$magnitude,$kedalaman,$lokasi) = prosesHTML($row->infogempa,"no");?>
-            <tr>
-                <td><?php echo $no; $no++?></td>
-                <td><?php echo $waktu?> WIB</td>
-                <td><?php echo $lintang?> , <?php echo $bujur?></td>
-                <td class="text-center"><?php echo $magnitude?> SR</td>
-                <td class="text-center"><?php echo $kedalaman?> km</td>
-                <td><?php echo $lokasi?></td>
-            </tr>
-        <?php endforeach;?>
-        </tbody>
-        </table>
-    </div>
+                        <tr>
+                            <td><?php echo $no; $no++?></td>
+                            <td><?php echo $waktu?> WIB</td>
+                            <td><?php echo $lintang?> , <?php echo $bujur?></td>
+                            <td class="text-center"><?php echo $magnitude?> SR</td>
+                            <td class="text-center"><?php echo $kedalaman?> km</td>
+                            <td><?php echo $lokasi?></td>
+                        </tr>
+                        <?php endforeach;?>
+                    </tbody>
+                </table>
+            </div>
 
+        </div>
+    </div>
 </div>
 
-<script>
 
+<script>
 var googleSat = L.tileLayer('http://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}', {
     maxZoom: 20,
     subdomains: ['mt0', 'mt1', 'mt2', 'mt3']
@@ -105,42 +112,40 @@ foreach ($results as $row):
         $radius = 3000;
     }
     if (floatval($magnitude)<5):?>
-        <script>
-    var circleMarker2 = L.circle([<?php echo $lintang?>,<?php echo $bujur?> ], {
+<script>
+var circleMarker2 = L.circle([<?php echo $lintang?>, <?php echo $bujur?>], {
     color: '<?php echo $warna?>',
     fillColor: '<?php echo $warna?>',
     fillOpacity: 1,
     radius: <?php echo $radius?>,
-    }).bindPopup("<?php echo $row->infogempa?>").addTo(dibawah5);
-    </script>
-    <?php else:?>
-        <script>
-    var circleMarker2 = L.circle([<?php echo $lintang?>,<?php echo $bujur?> ], {
+}).bindPopup("<?php echo $row->infogempa?>").addTo(dibawah5);
+</script>
+<?php else:?>
+<script>
+var circleMarker2 = L.circle([<?php echo $lintang?>, <?php echo $bujur?>], {
     color: '<?php echo $warna?>',
     fillColor: '<?php echo $warna?>',
     fillOpacity: 1,
     radius: <?php echo $radius?>,
-    }).bindPopup("<?php echo $row->infogempa?>").addTo(diatas5);
-    </script>
-    <?php endif;
+}).bindPopup("<?php echo $row->infogempa?>").addTo(diatas5);
+</script>
+<?php endif;
     ?>
-    
+
 
 <?php $no++; endforeach;?>
 
 <script>
-
-
 const map = L.map('map', {
     center: [-9.5, 115.26],
     zoom: 7,
-    layers: [googleSat, dibawah5 , diatas5],
+    layers: [googleSat, dibawah5, diatas5],
 
 });
 
 const baseLayers = {
-'Default': googleStreets,
-'Satelite': googleSat,
+    'Default': googleStreets,
+    'Satelite': googleSat,
 };
 
 const overlays = {
@@ -149,18 +154,16 @@ const overlays = {
 };
 
 const layerControl = L.control.layers(baseLayers, overlays).addTo(map);
-
 </script>
 
 
 <!-- MEMBERIKAN ANIMASI PADA GEMPA TERBARU -->
 <script>
-
-var circleMarker = L.circle([<?php echo $lintangTerakhir?>,<?php echo $bujurTerakhir?>], {
-color: 'red',
-fillColor: '#f03',
-fillOpacity: 0,
-radius: 3000,
+var circleMarker = L.circle([<?php echo $lintangTerakhir?>, <?php echo $bujurTerakhir?>], {
+    color: 'red',
+    fillColor: '#f03',
+    fillOpacity: 0,
+    radius: 3000,
 }).bindPopup("<?php echo $infoGempaTerakhir?>").addTo(dibawah5);
 
 // Variabel untuk menyimpan interval animasi
@@ -168,19 +171,19 @@ var animationInterval;
 
 // Fungsi untuk mengubah ukuran marker
 function toggleMarkerSize() {
-  var scaleFactor = 2;
-  var originalRadius = 3000;
-  var enlargedRadius = originalRadius * scaleFactor;
-  var terbesar = 30000;
+    var scaleFactor = 2;
+    var originalRadius = 3000;
+    var enlargedRadius = originalRadius * scaleFactor;
+    var terbesar = 30000;
 
-  var currentRadius = circleMarker.getRadius();
+    var currentRadius = circleMarker.getRadius();
 
-  if (currentRadius < terbesar) {
-    circleMarker.setRadius(currentRadius + 2000);
-   
-  } else {
-    circleMarker.setRadius(originalRadius);
-  }
+    if (currentRadius < terbesar) {
+        circleMarker.setRadius(currentRadius + 2000);
+
+    } else {
+        circleMarker.setRadius(originalRadius);
+    }
 }
 
 // Atur interval animasi
