@@ -17,7 +17,7 @@
                         <li>geofisika.denpasar@gmail.com</li>
                         <li>Telp (0361) 226157</li>
                     </ul>
-                  
+
                 </div>
 
 
@@ -34,11 +34,17 @@
                     <div class="row">
                         <strong>Find Us</strong>
                         <div class="col-12">
-                            <span class="sosmed-icon" href="#"><i class="bi bi-whatsapp"></i></span>
-                            <span class="sosmed-icon" href="#"><i class="bi bi-instagram"></i></span>
-                            <span class="sosmed-icon" href="#"><i class="bi bi-facebook"></i></span>
+                            <span class="sosmed-icon" href=""><a href="https://wa.me/6289524663695"><i
+                                        class="bi bi-whatsapp"></i></a></span>
+                            <span class="sosmed-icon" href=""><a href="https://www.instagram.com/bmkg_denpasar/"><i
+                                        class="bi bi-instagram"></i></a></span>
+                            <span class="sosmed-icon" href=""><a
+                                    href="https://www.facebook.com/BMKGDenpasar/?locale=id_ID"><i
+                                        class="bi bi-facebook"></i></a></span>
                             <span class="sosmed-icon" href="#"><i class="bi bi-twitter"></i></span>
-                            <span class="sosmed-icon" href="#"><i class="bi bi-youtube"></i></span>
+                            <span class="sosmed-icon" href=""><a
+                                    href="https://www.youtube.com/channel/UChOunbpZLEeppdisO9m8TFA"><i
+                                        class="bi bi-youtube"></i></a></span>
                         </div>
 
                     </div>

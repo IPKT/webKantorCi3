@@ -119,7 +119,7 @@ class Web extends CI_Controller {
 
 	public function listArtikel(){
 		$data = array(
-			'page' => 'artikel/listArtikel/'.$bulan,
+			'page' => 'artikel/listArtikel',
 		);
 		$this->load->view('layout/template',$data,false);	
 	}

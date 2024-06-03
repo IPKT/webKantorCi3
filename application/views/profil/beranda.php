@@ -1,4 +1,4 @@
-<div class="card">
+<div class="card my-2">
     <div class="card-header" style="background-color:#343f52; color: white;">
         <div>
             <h5>Gempa Bumi Terkini </h5>
