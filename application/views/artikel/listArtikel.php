@@ -6,8 +6,22 @@
     </div>
     <div class="card-body my-2">
         <div class="card my-2">
-            <img width="50%" class="card-img-top" src="<?php echo  base_url('gambar/artikel/artikel_20240621_2_1.png') ?>"
-                alt="">
+            <img width="50%" class="card-img-top"
+                src="<?php echo  base_url('gambar/artikel/artikel_20240621_3_1.png') ?>" alt="">
+            <div class="card-body">
+                <h5 class="card-title">Sambaran Petir di Wilayah Bali Periode 14 - 20 Juni 2024</h5>
+                <p class="card-text">Berdasarkan peta kerapatan sambaran petir wilayah Bali periode 14 - 20 Juni,
+                    aktivitas petir terjadi di wilayah Bali dengan termasuk dalam kategori Rendah < 8. Kelistrikan udara
+                        yang terjadi sebanyak 376 sambaran (Strike) yang terbagi atas 68 CG+ (Cloud to Ground +), 188
+                        CG- (Cloud to Ground -) dan 120 IC (Intra-Cloud). </p>
+
+                        <a href="<?php echo base_url('artikel/20240621_3') ?>"
+                            class="btn btn-primary btn-sm">Selengkapnya</a>
+            </div>
+        </div>
+        <div class="card my-2">
+            <img width="50%" class="card-img-top"
+                src="<?php echo  base_url('gambar/artikel/artikel_20240621_2_1.png') ?>" alt="">
             <div class="card-body">
                 <h5 class="card-title">Terbit dan Terbenam Bali dan Sekitarnya Periode 24 - 30 Juni 2024</h5>
                 <p class="card-text">Berdasarkan data Almanak BMKG selama 24 - 30 Juni 2024, waktu terbit dan terbenam

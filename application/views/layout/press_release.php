@@ -3,6 +3,14 @@
         <h5>Press Release / Artikel </h5>
     </div>
     <div class="content-body">
+    <div class="card mb-2">
+            <div class="card-body">
+                <h5 class="card-title">Sambaran Petir di Wilayah Bali Periode  14 - 20 Juni 2024
+                </h5>
+                <p class="card-text">Berdasarkan peta kerapatan sambaran petir wilayah Bali periode 14 - 20 Juni, aktivitas petir terjadi di wilayah Bali dengan termasuk dalam kategori Rendah < 8 ....</p>
+                <a href="<?php echo base_url('artikel/20240621_3') ?>" class="btn btn-primary btn-sm">Selengkapnya</a>
+            </div>
+        </div>
         <div class="card mb-2">
             <div class="card-body">
                 <h5 class="card-title">Terbit dan Terbenam Bali dan Sekitarnya Periode 24 - 30 Juni 2024
