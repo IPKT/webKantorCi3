@@ -3,6 +3,6 @@
         <h5>Indeks Kepuasan Masyarakat</h5>
     </div>
     <div class="card-body">
-        <div class="col-lg-12"><img src="<?php echo base_url('gambar/ikmDNP.png') ?>" alt="" width="100%"></div>
+        <div class="col-lg-12"><img src="<?php echo base_url('gambar/ikm2.png') ?>" alt="" width="100%"></div>
     </div>
 </div>

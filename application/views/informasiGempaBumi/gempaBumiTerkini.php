@@ -9,7 +9,7 @@
             <div id="map" class="map" style="width: 100%; height: 500px;"></div>
 
             <div class="table-responsive">
-                <table class="table table-bordered table-hover table-striped small" id="tabelGempaTerkini">
+                <table class="table table-bordered table-hover table-striped small">
                     <thead>
                         <tr class="text-center">
                             <th>No</th>
