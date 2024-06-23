@@ -5,7 +5,38 @@
         </div>
     </div>
     <div class="card-body my-2">
-        <div class="card">
+        <div class="card my-2">
+            <img width="50%" class="card-img-top" src="<?php echo  base_url('gambar/artikel/artikel_20240621_2_1.png') ?>"
+                alt="">
+            <div class="card-body">
+                <h5 class="card-title">Terbit dan Terbenam Bali dan Sekitarnya Periode 24 - 30 Juni 2024</h5>
+                <p class="card-text">Berdasarkan data Almanak BMKG selama 24 - 30 Juni 2024, waktu terbit dan terbenam
+                    matahari di kota dan kabupaten di Bali bervariasi per harinya. Variasi waktu terbit dan terbenam
+                    matahari dipengaruhi oleh letak suatu tempat. Selama periode tersebut, waktu terbit matahari antara
+                    06.31 WITA hingga 06.36 WITA dan waktu terbenam matahari antara 18.09 WITA hingga 18.15 WITA.
+                    Berikut infografis terbit dan terbenam matahari di seluruh kabupaten/kota di Bali
+                </p>
+
+                <a href="<?php echo base_url('artikel/20240621_2') ?>" class="btn btn-primary btn-sm">Selengkapnya</a>
+            </div>
+        </div>
+        <div class="card my-2">
+            <img width="50%" class="card-img-top" src="<?php echo  base_url('gambar/artikel/artikel_20240621_1.jpg') ?>"
+                alt="">
+            <div class="card-body">
+                <h5 class="card-title">Gempabumi Wilayah Bali dan Sekitarnya periode periode 14 - 20 Juni 2024</h5>
+                <p class="card-text">Berdasarkan data Stasiun Geofisika Denpasar selama minggu ke-3 bulan Juni 2024, di
+                    daerah Bali dan sekitarnya telah terjadi 46 kejadian gempabumi dengan magnitudo bervariasi mulai
+                    dari M 1.7 sampai M 3.6 yang didominasi oleh kejadian gempabumi dengan magnitudo M < 3 Kejadian
+                        gempabumi dengan magnitudo M < 3 sejumlah 36 kejadian atau 78% dari total kejadian gempabumi.
+                        Sedangkan untuk M 3 – 5 sejumlah 10 kejadian gempabumi atau 22% dari total kejadian gempabumi
+                        dan tidak terdapat kejadian gempabumi dengan magnitudo M>5.
+                </p>
+
+                <a href="<?php echo base_url('artikel/20240621') ?>" class="btn btn-primary btn-sm">Selengkapnya</a>
+            </div>
+        </div>
+        <div class="card my-2">
             <img class="card-img-top" src="<?php echo  base_url('gambar/artikel/artikel_20230208_1.jpg') ?>" alt="">
             <div class="card-body">
                 <h5 class="card-title">Stasiun Geofisika Denpasar dalam Simulasi Kesiapsiagaan Gempabumi dan Tsunami
