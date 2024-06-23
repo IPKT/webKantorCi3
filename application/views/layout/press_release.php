@@ -3,12 +3,14 @@
         <h5>Press Release / Artikel </h5>
     </div>
     <div class="content-body">
-    <div class="card mb-2">
+        <div class="card mb-2">
             <div class="card-body">
-                <h5 class="card-title">Sambaran Petir di Wilayah Bali Periode  14 - 20 Juni 2024
+                <h5 class="card-title">Sambaran Petir di Wilayah Bali Periode 14 - 20 Juni 2024
                 </h5>
-                <p class="card-text">Berdasarkan peta kerapatan sambaran petir wilayah Bali periode 14 - 20 Juni, aktivitas petir terjadi di wilayah Bali dengan termasuk dalam kategori Rendah < 8 ....</p>
-                <a href="<?php echo base_url('artikel/20240621_3') ?>" class="btn btn-primary btn-sm">Selengkapnya</a>
+                <p class="card-text">Berdasarkan peta kerapatan sambaran petir wilayah Bali periode 14 - 20 Juni,
+                    aktivitas petir terjadi di wilayah Bali dengan termasuk dalam kategori Rendah < 8 ....</p>
+                        <a href="<?php echo base_url('artikel/20240621_3') ?>"
+                            class="btn btn-primary btn-sm">Selengkapnya</a>
             </div>
         </div>
         <div class="card mb-2">
@@ -39,25 +41,6 @@
                     maka tanggal 26 April 2023 ditetapkan sebagai Hari Kesiapsiagaan Bencana Nasional (HKBN). .....
                 </p>
                 <a href="<?php echo base_url('artikel/20230427') ?>" class="btn btn-primary btn-sm">Selengkapnya</a>
-            </div>
-        </div>
-        <div class="card mb-2">
-            <div class="card-body">
-                <h5 class="card-title">Rangkaian BMKG Goes to School Kabupaten Buleleng </h5>
-                <p class="card-text">Sebagai tidak lanjut kegiatan Sekolah Lapang Gempabumi yang diadakan di
-                    Kabupaten Buleleng wilayah Desa Pengastulan, Stasiun Geofisika Denpasar melakukan kegiatan BMKG
-                    Goes To School....</p>
-                <a href="<?php echo base_url('artikel/20230905') ?>" class="btn btn-primary btn-sm">Selengkapnya</a>
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-body">
-                <h5 class="card-title">Pelatihan Penanggulangan Bencana Alam Di Wilayah Kerja Lanal Denpasar 2023
-                </h5>
-                <p class="card-text">Berdasarkan rapat pimpinan TNI-Polri tahun 2023 yang dilaksanakan pada hari
-                    Rabu, 8 Februari 2023. Presiden RI Joko Widodo menyebutkan bahwa pemerintah telah menetapkan
-                    tujuh prioritas nasional ....</p>
-                <a href="<?php echo base_url('artikel/20230208') ?>" class="btn btn-primary btn-sm">Selengkapnya</a>
             </div>
         </div>
     </div>
