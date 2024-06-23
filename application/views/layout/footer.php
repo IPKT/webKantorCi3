@@ -1,3 +1,8 @@
+<div class="position-fixed position-absolute bottom-0 end-0">
+    <span class="sosmed-icon" href=""><a href="https://wa.me/6289524663695"><i style="color: black;"
+                class="bi bi-whatsapp"></i></a></span>
+</div>
+
 <div data-aos="zoom-in" class="container-fluid" style="background-color:#343f52; color: white;">
     <div class="container">
         <footer class="py-2">

@@ -1,9 +1,16 @@
+/* .navbar {
+    padding-bottom: 5rem;
+    background-color: #e2edff;
+  } */
+
 body{
     position: relative;
     min-height: 100vh;
 }
 
+
 #box-jam{
+    position: fixed;
     height: 25px;
     background-color:#343f52;
     color: white;
@@ -91,5 +98,11 @@ a{
 #logo123{
     width: 100px;
 }
+
+#fix-bawah {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
 
 @media only screen and ( max-width: 768px) {}
