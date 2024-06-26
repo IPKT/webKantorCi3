@@ -46,7 +46,8 @@
                             <span class="sosmed-icon" href=""><a
                                     href="https://www.facebook.com/BMKGDenpasar/?locale=id_ID"><i
                                         class="bi bi-facebook"></i></a></span>
-                            <span class="sosmed-icon" href="#"><i class="bi bi-twitter"></i></span>
+                                        <span class="sosmed-icon" href=""><a href="https://x.com/BMKG_Denpasar"><i
+                                        class="bi bi-twitter"></i></a></span>
                             <span class="sosmed-icon" href=""><a
                                     href="https://www.youtube.com/channel/UChOunbpZLEeppdisO9m8TFA"><i
                                         class="bi bi-youtube"></i></a></span>
