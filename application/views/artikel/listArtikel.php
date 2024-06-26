@@ -9,6 +9,21 @@
             <img width="50%" class="card-img-top"
                 src="<?php echo  base_url('gambar/artikel/artikel_20240621_3_1.png') ?>" alt="">
             <div class="card-body">
+                <h5 class="card-title">BMKG Denpasar melaksanakan SLG di wilayah Kusamba</h5>
+                <p class="card-text">Wilayah Kusamba merupakan wilayah yang rawan terhadap bencana gempabumi dan
+                    tsunami. Berdasarkan catatan historis tsunami, wilayah Kusamba sudah empat kali diterjang tsunami.
+                    Kejadian diawali dari tsunami tahun 1815 dan 1917 yang dikenal sebagai Gejer Bali I dan II dimana
+                    menimbulkan banyak korban jiwa. Selanjutnya tahun 1977 merupakan tsunami kiriman dari Selatan
+                    Sumbawa. Selain itu, tsunami Banyuwangi tahun 1994 disebabkan oleh megathrust Selatan Banyuwangi.
+                </p>
+
+                <a href="<?php echo base_url('artikel/20240626') ?>" class="btn btn-primary btn-sm">Selengkapnya</a>
+            </div>
+        </div>
+        <div class="card my-2">
+            <img width="50%" class="card-img-top"
+                src="<?php echo  base_url('gambar/artikel/artikel_20240621_3_1.png') ?>" alt="">
+            <div class="card-body">
                 <h5 class="card-title">Sambaran Petir di Wilayah Bali Periode 14 - 20 Juni 2024</h5>
                 <p class="card-text">Berdasarkan peta kerapatan sambaran petir wilayah Bali periode 14 - 20 Juni,
                     aktivitas petir terjadi di wilayah Bali dengan termasuk dalam kategori Rendah < 8. Kelistrikan udara
