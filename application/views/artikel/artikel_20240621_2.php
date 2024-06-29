@@ -1,5 +1,5 @@
 <div class="container">
-    <h2>Gempabumi Wilayah Bali dan Sekitarnya periode periode 14 - 20 Juni 2024
+    <h2>Terbit dan Terbenam Bali dan Sekitarnya Periode 24 - 30 Juni 2024
     </h2>
     <div class="container d-flex justify-content-center">
         <div id="carouselExampleCaptions" class="carousel slide w-70" data-bs-ride="carousel" >

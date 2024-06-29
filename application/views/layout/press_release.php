@@ -3,7 +3,7 @@
         <h5>Press Release / Artikel </h5>
     </div>
     <div class="content-body">
-    <div class="card mb-2">
+        <div class="card mb-2">
             <div class="card-body">
                 <h5 class="card-title">BMKG Denpasar melaksanakan SLG di wilayah Kusamba
                 </h5>
@@ -11,39 +11,39 @@
                     tsunami. Berdasarkan catatan historis tsunami, wilayah Kusamba sudah empat kali diterjang tsunami.
                     Kejadian diawali dari tsunami tahun 1815 dan 1917 yang dikenal sebagai Gejer Bali I dan II dimana
                     menimbulkan banyak korban jiwa. Selanjutnya tahun 1977 merupakan tsunami kiriman dari Selatan
-                    Sumbawa. Selain itu, tsunami Banyuwangi tahun 1994 disebabkan oleh megathrust Selatan Banyuwangi....</p>
-                        <a href="<?php echo base_url('artikel/20240626') ?>"
+                    Sumbawa. Selain itu, tsunami Banyuwangi tahun 1994 disebabkan oleh megathrust Selatan Banyuwangi....
+                </p>
+                <a href="<?php echo base_url('artikel/20240626') ?>" class="btn btn-primary btn-sm">Selengkapnya</a>
+            </div>
+        </div>
+        <div class="card mb-2">
+            <div class="card-body">
+                <h5 class="card-title">Gempabumi Wilayah Bali dan Sekitarnya periode periode 20 - 27 Juni 2024
+                </h5>
+                <p class="card-text">Berdasarkan data Stasiun GeofisikaDenpasar selama minggu ke-4 bulan Juni 2024, di
+                    daerah Bali dan sekitarnya telah terjadi 30 kejadian gempabumi dengan magnitudo bervariasi mulai
+                    dari M 1.6 sampai M 3.4 yang didominasi oleh kejadian gempabumi dengan magnitudo M < 3. ....</p>
+                        <a href="<?php echo base_url('artikel/20240628_1') ?>"
                             class="btn btn-primary btn-sm">Selengkapnya</a>
             </div>
         </div>
         <div class="card mb-2">
             <div class="card-body">
-                <h5 class="card-title">Sambaran Petir di Wilayah Bali Periode 14 - 20 Juni 2024
+                <h5 class="card-title">Terbit dan Terbenam Bali dan Sekitarnya Periode 1 - 7 Juli 2024
                 </h5>
-                <p class="card-text">Berdasarkan peta kerapatan sambaran petir wilayah Bali periode 14 - 20 Juni,
-                    aktivitas petir terjadi di wilayah Bali dengan termasuk dalam kategori Rendah < 8 ....</p>
-                        <a href="<?php echo base_url('artikel/20240621_3') ?>"
-                            class="btn btn-primary btn-sm">Selengkapnya</a>
-            </div>
-        </div>
-        <div class="card mb-2">
-            <div class="card-body">
-                <h5 class="card-title">Terbit dan Terbenam Bali dan Sekitarnya Periode 24 - 30 Juni 2024
-                </h5>
-                <p class="card-text">Berdasarkan data Almanak BMKG selama 24 - 30 Juni 2024, waktu terbit dan terbenam
+                <p class="card-text">Berdasarkan data Almanak BMKG selama 1 - 7 Juli 2024, waktu terbit dan terbenam
                     matahari di kota dan kabupaten di Bali bervariasi per harinya. Variasi waktu terbit dan terbenam
                     matahari dipengaruhi oleh letak suatu tempat....... </p>
-                <a href="<?php echo base_url('artikel/20240621_2') ?>" class="btn btn-primary btn-sm">Selengkapnya</a>
+                <a href="<?php echo base_url('artikel/20240628_2') ?>" class="btn btn-primary btn-sm">Selengkapnya</a>
             </div>
         </div>
         <div class="card mb-2">
             <div class="card-body">
-                <h5 class="card-title">Gempabumi Wilayah Bali dan Sekitarnya periode periode 14 - 20 Juni 2024
+                <h5 class="card-title">Sambaran Petir di Wilayah Bali Periode  21 - 27 Juni 2024
                 </h5>
-                <p class="card-text">Berdasarkan data Stasiun Geofisika Denpasar selama minggu ke-3 bulan Juni 2024, di
-                    daerah Bali dan sekitarnya telah terjadi 46 kejadian gempabumi dengan magnitudo bervariasi mulai
-                    dari M 1.7 sampai M 3.6 yang didominasi oleh kejadian gempabumi dengan magnitudo M < 3....... </p>
-                        <a href="<?php echo base_url('artikel/20240621') ?>"
+                <p class="card-text">Berdasarkan peta kerapatan sambaran petir wilayah Bali periode 21 - 27 Juni,
+                    aktivitas petir terjadi di wilayah Bali dengan termasuk dalam kategori Rendah < 8 ..... </p>
+                        <a href="<?php echo base_url('artikel/20240628_3') ?>"
                             class="btn btn-primary btn-sm">Selengkapnya</a>
             </div>
         </div>
