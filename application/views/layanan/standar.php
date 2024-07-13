@@ -11,7 +11,6 @@
                     <h4>Jadwal Pelayanan</h4>
                 </div>
                 <div class="card-body">
-                    <h5 class="card-title">Special title treatment</h5>
                     <p class="card-text">Senin - Kamis Pukul 08.00 - 16.00 WITA</p>
                     <p class="card-text">Jumat Pukul 08.00 - 16.30 WITA</p>
                 </div>

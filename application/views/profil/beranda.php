@@ -57,12 +57,12 @@
                     aria-label="Slide 3"></button>
                 <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"
                     aria-label="Slide 4"></button>
-                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4"
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4"
                     aria-label="Slide 5"></button>
             </div>
             <div class="carousel-inner">
-            <div class="carousel-item active">
-                    <img src="<?php echo base_url('gambar/kegiatan/20240620.jpg') ?>" class="d-block w-100" alt="...">
+                <div class="carousel-item active">
+                    <img src="<?php echo base_url('gambar/kegiatan/20240620.jpeg') ?>" class="d-block w-100" alt="...">
                     <div class="carousel-caption d-none d-md-block">
                         <h5>Sekolah Lapang Gempa Bumi 2024</h5>
                         <h6>20 Juni 2024</h6>
