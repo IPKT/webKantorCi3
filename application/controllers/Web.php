@@ -152,6 +152,116 @@ class Web extends CI_Controller {
 		echo "hahaha";
     }
 
+	//input Page Peringatan Dini Ngurah Rai
+	public function inputPD(){
+		$this->load->view('petir/inputPeringatanDini',false);	
+	}
+
+	public function prosesDataPD(){
+		// $PD = $this->input->post('peringatanDini');
+
+		// $PD = explode("PERINGATAN DINI CUACA" , $PD)[1];
+		// $nomor = explode("NOMOR " , $PD)[1];
+		// $nomor = explode("," , $nomor)[0];
+		// $mulai = explode("BERLAKU TANGGAL  " , $PD)[1];
+		// $mulai = explode(" SAMPAI DENGAN " , $mulai)[0];
+
+		// $akhir = explode("SAMPAI DENGAN " , $PD)[1];
+		// $akhir = explode(". BERDASARKAN" , $akhir)[0];
+
+		// $pengamatan = explode("PENGAMATAN JAM " , $PD)[1];
+		// $pengamatan = explode("," , $pengamatan)[0];
+
+		// $peringatan = explode($pengamatan.", " , $PD)[1];
+		// $peringatan = explode("." , $peringatan)[0];
+
+		// $prakiraan = explode($peringatan.". " , $PD)[1];
+		// $prakiraan = explode("." , $prakiraan)[0];
+		
+		// // echo $nomor;
+		// // echo "<br>";
+		// // echo $mulai;
+		// // echo "<br>";
+		// // echo $akhir;
+		// // echo "<br>";
+		// // echo $pengamatan;
+		// // echo "<br>";
+		// // echo $peringatan;
+		// // echo "<br>";
+		// // echo $prakiraan;
+
+		// // var_dump($prakiraan);
+
+		// $data = array(
+		// 	'pd' => $this->input->post('peringatanDini'),
+		// );
+		// $this->load->view('petir/prosesPD',$data,false);	
+
+		$pd = $this->input->post('peringatanDini');
+		$pd = explode("PERINGATAN DINI CUACA" , $pd)[1];
+		$nomor = explode("NOMOR " , $pd)[1];
+		$nomor = explode("," , $nomor)[0];
+		$mulai = explode("BERLAKU TANGGAL  " , $pd)[1];
+		$mulai = explode(" SAMPAI DENGAN " , $mulai)[0];
+
+		$akhir = explode("SAMPAI DENGAN " , $pd)[1];
+		$akhir = explode(". BERDASARKAN" , $akhir)[0];
+
+		$pengamatan = explode("PENGAMATAN JAM " , $pd)[1];
+		$pengamatan = explode("," , $pengamatan)[0];
+
+		$peringatan = explode($pengamatan.", " , $pd)[1];
+		$peringatan = explode("." , $peringatan)[0];
+
+		$prakiraan = explode($peringatan.". " , $pd)[1];
+		$prakiraan = explode("." , $prakiraan)[0];
+		// echo "<br>";
+		// echo $nomor;
+		// echo "<br>";
+		// echo $mulai;
+		// echo "<br>";
+		// echo $akhir;
+		// echo "<br>";
+		// echo $pengamatan;
+		// echo "<br>";
+		// echo $peringatan;
+		// echo "<br>";
+		// echo $prakiraan;
+
+
+		$isi =
+		"<?xml version=\"1.0\" encoding=\"US-ASCII\" standalone=\"yes\"?>
+		<!DOCTYPE peringatanDini [
+		<!ELEMENT  peringatanDini EMPTY>
+		<!ATTLIST peringatanDini
+		nomor 		ID	#REQUIRED
+		mulai		CDATA	#REQUIRED
+		akhir		CDATA	#REQUIRED
+		pengamatan    CDATA	#REQUIRED
+		peringatan    CDATA   #REQUIRED
+		prakiraan     CDATA   #REQUIRED
+		>
+		]>
+		<peringatanDini nomor=\"$nomor\" mulai=\"$mulai\" akhir=\"$akhir\" pengamatan=\"$pengamatan\" peringatan=\"$peringatan\" prakiraan=\"$prakiraan\" />";
+
+
+		//$buka = fopen("home/sysop/Music/event.xml", "w+");
+		$fileXML = base_url('gambar/event.xml');
+		$buka = fopen('peringatanDini.xml','w');
+		if (!$buka)
+		{
+		echo "<p><b>Data belum terproses. Mohon dicoba lagi</b><p><html>";
+		exit;
+		}
+
+		fwrite($buka, $isi);
+		fclose($buka);
+
+		// $this->load->view('petir/prosesPD',$data,false);	
+		$url = base_url('peringatanDini.xml');
+		header("Location: $url");
+	}
+
 
 
 }
