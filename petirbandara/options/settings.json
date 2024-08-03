@@ -1,0 +1,24 @@
+{
+    "MapCenter": { "Lat": -8.7441718, "Lon":115.1759463},
+    "StationCenter": { "Lat": -8.744712, "Lon": 115.165306 },
+    "InitialZoom": 14,
+    "DataFileRelativePath": "../petir/data/db/",
+    "DistanceUnit": "km", 
+    "SymbolSet": 0,
+    "NumRings": 8,
+    "FirstRing": 1,
+    "RingSpacing": 1,
+    "RingColor": "rgb(140, 140, 140)",
+    "DrawLabels": true,
+    "PanelOpacity": 0.75,
+    "MapProvider": 5,
+    "MapProviderOverlay": -1,
+    "StrikeHistoryMinutes": 30,
+    "GraphHistoryMinutes": 30,
+    "DataSource": "NexStorm",
+    "HideUncorrelated": false,
+    "ShowTypes": true,
+    "ClusteringMinZoom": 8
+}
+
+

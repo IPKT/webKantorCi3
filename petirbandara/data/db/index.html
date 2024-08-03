@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Sistem Realtime Petir BMKG Denpasar</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+     <link rel="stylesheet" href="css/leaflet.css" type="text/css">
+    <link rel="stylesheet" href="css/MarkerCluster.css" type="text/css">
+    <link rel="stylesheet" href="css/custom.css" type="text/css">
+
+    <!-- Custom Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+
+    <!-- Plugin CSS -->
+    <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="vendor/simple-line-icons/css/simple-line-icons.css">
+    <link rel="stylesheet" href="vendor/device-mockups/device-mockups.min.css">
+
+    <!-- Theme CSS -->
+    <link href="css/new-age.min.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body style="background-color: black;">
+
+    <div class="container">
+    
+            <div class="row">
+                <div class="col-sm-12">
+                    
+                       
+
+    <!-- Start of main HTML code for StormVue 5 NGX -->
+    <div id="centerPage" style="left:50%; margin-left: 0px; top:50%; margin-top:4px;">
+        <div tabindex="0" class="leaflet-container leaflet-fade-anim" id="map" style="left: 0px; top:0px; width: 100%; height:700px; position: relative; background-color: black;">
+        
+            <canvas id="pnlClockCanvas" width="220" height="30" style="z-index: 2; position:relative; left:5px; top:10px;">
+                Your browser does not support HTML5 Canvas.
+            </canvas>
+
+            <canvas id="pnlCanvas" width="245" height="330" style="z-index: 2; position:relative; left:450px; top:5px;">
+                Your browser does not support HTML5 Canvas.
+            </canvas>
+
+            <canvas id="pnlSymCanvas" width="245" height="65" style="z-index: 2; position:relative; left:10px; top:400px;">
+                Your browser does not support HTML5 Canvas.
+            </canvas>
+            
+        </div>
+
+        <script>L_PREFER_CANVAS = true;</script>
+        <script src="lib/leaflet_073mod.js"></script>
+        <script src="lib/leaflet.markercluster.js"></script>
+        <script src="lib/Leaflet.Geodesic.js"></script>
+        <script src="lib/extentsions.js"></script>
+        <script src="lib/preLoad.js"></script>
+        <script src="lib/symbols.js"></script>
+        <script src="lib/Counter.js"></script>
+        <script src="lib/Util.js"></script>
+        <script src="lib/ClockPanel.js"></script>
+        <script src="lib/DataPanel.js"></script>
+        <script src="lib/LegendPanel.js"></script>
+        <script src="lib/LegendPanelNC.js"></script>
+        <script src="options/mapProviders.js"></script>
+        <script src="lib/main.js"></script>
+        
+        
+    </div>
+    <!-- End of main HTML code for StormVue 5 NGX -->
+
+    <!-- Astrogenic logo - may be removed -->
+     <div id="footerlogo" style="left:100%; margin-left: 0px; margin-top:4px;">
+        <marquee bgcolor="blue" style="font-family:arial; font-size:20px; color:#ffffff;">PERINGATAN DINI CUACA BERPOTENSI HUJAN SEDANG HINGGA LEBAT DI WILAYAH DENPASAR</marquee>
+    </div>
+                </div>
+                
+</div>
+        </div>
+   
+
+<!-- jQuery -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+
+    <!-- Theme JavaScript -->
+    <script src="js/new-age.min.js"></script>
+
+</body>
+
+       
+   
+</html>

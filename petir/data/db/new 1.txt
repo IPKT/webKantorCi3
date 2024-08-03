@@ -1,0 +1,6 @@
+
+
+
+1. menampilkan data sqlite di front end dalam bentuk tabel, bisa export ke excell(xls)
+2. sort dengan tanggal/jam dan jenis petir
+3. integrasi dengan Google API/ QGIS/Leaflet untuk menampilkan plotting(marker)

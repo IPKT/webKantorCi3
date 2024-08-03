@@ -49,6 +49,15 @@
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Informasi
+                            Petir</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="<?php echo base_url('/petir') ?>">Informasi Petir Wilayah Bali</a></li>
+                            <li><a class="dropdown-item" href="<?php echo base_url('/petirbandara') ?>">Informasi Petir Ngurah Rai Airport</a></li>
+                            <!-- <li><a class="dropdown-item" href="">Gempa Bumi M > 5 SR</a></li> -->
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button"
                             data-bs-toggle="dropdown">Publikasi</a>
                         <ul class="dropdown-menu">

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="ASCII"?>
+<data>
+	<coordinates>
+		<coordinateUnits>Degrees decimal</coordinateUnits>
+		<rangeUnits>kilometers</rangeUnits>
+		<centerLat>-8.677</centerLat>
+		<centerLon>115.21</centerLon>
+		<northLat>-6.86867433687087</northLat>
+		<southLat>-10.4853256631291</southLat>
+		<eastLon>117.027294019386</eastLon>
+		<westLon>113.392705980614</westLon>
+		<range>200</range>
+	</coordinates>
+	<stormvue>
+	<![CDATA[
+
+MAP_INDEX:	n
+MAPn_NAME:	/maps/mps_200.png
+MAPn_DESC:	200 km range
+MAPn_BORDER:	-6.86867433687087,-10.4853256631291,117.027294019386,113.392705980614
+MAPn_ZOOMB:	200
+MAP_END
+	]]>
+	</stormvue>
+</data>
