@@ -25,7 +25,7 @@
     <div class="container d-flex justify-content-center">
         <img width="80%" src="<?php echo  base_url('gambar/artikel/artikel_20240809_1_3.png') ?>" alt="">
     </div>
-    <p>Pada periode ini, terdPada periode ini, terdapat 1 gempabumi dirasakan. Gempabumi pertama berkekuatan M2.8 pada
+    <p>Pada periode ini, terdapat 1 gempabumi dirasakan. Gempabumi pertama berkekuatan M2.8 pada
         tanggal 06 Agustus 2024 pukul 22:14:22 WIB dengan kedalaman 11 km di 20 km Tenggara KARANGASEM-BALI.
 
     </p>
