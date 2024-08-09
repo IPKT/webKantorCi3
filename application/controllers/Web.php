@@ -154,20 +154,20 @@ class Web extends CI_Controller {
 
 	//input Page Peringatan Dini Ngurah Rai
 	public function inputPD(){
-		if (
-			$this->session->userdata('username') == null
-			) {
-			   redirect('auth/login_page');
-			}
+		// if (
+		// 	$this->session->userdata('username') == null
+		// 	) {
+		// 	   redirect('auth/login_page');
+		// 	}
 		$this->load->view('petir/inputPeringatanDini',false);	
 	}
 
 	public function prosesDataPD(){
-		if (
-			$this->session->userdata('username') == null
-			) {
-			   redirect('auth');
-			}
+		// if (
+		// 	$this->session->userdata('username') == null
+		// 	) {
+		// 	   redirect('auth');
+		// 	}
 		// $pd = $this->input->post('peringatanDini');
 		// $pd = explode("PERINGATAN DINI CUACA" , $pd)[1];
 		// $nomor = explode("NOMOR " , $pd)[1];
@@ -186,72 +186,138 @@ class Web extends CI_Controller {
 
 		// $prakiraan = explode($peringatan.". " , $pd)[1];
 		// $prakiraan = explode("." , $prakiraan)[0];
-		$pd = $this->input->post('peringatanDini');
-		$pd = explode("PERINGATAN DINI CUACA" , $pd);
-		$pd = $pd[1];
-		$nomor = explode("NOMOR " , $pd);
-		$nomor = $nomor[1];
-		$nomor = explode("," , $nomor);
-		$nomor = $nomor[0];
-		$mulai = explode("BERLAKU TANGGAL  " , $pd);
-		$mulai = $mulai[1];
-		$mulai = explode(" SAMPAI DENGAN " , $mulai);
-		$mulai = $mulai[0];
 
 
-		$akhir = explode("SAMPAI DENGAN " , $pd);
-		$akhir = $akhir[1];
-		$akhir = explode(". BERDASARKAN" , $akhir);
-		$akhir = $akhir[0];
+		// PROSES PERINGATAN DINI CUACA
+		if ($this->input->post('peringatanDini') != NULL) {
 
-		$pengamatan = explode("PENGAMATAN JAM " , $pd);
-		$pengamatan = $pengamatan[1];
-		$pengamatan = explode("," , $pengamatan);
-		$pengamatan = $pengamatan[0];
-
-		$peringatan = explode($pengamatan.", " , $pd);
-		$peringatan = $peringatan[1];
-		$peringatan = explode("." , $peringatan);
-		$peringatan = $peringatan[0];
-
-		$prakiraan = explode($peringatan.". " , $pd);
-		$prakiraan = $prakiraan[1];
-		$prakiraan = explode("." , $prakiraan);
-		$prakiraan = $prakiraan[0];
-
-		$isi =
-		"<?xml version=\"1.0\" encoding=\"US-ASCII\" standalone=\"yes\"?>
-		<!DOCTYPE peringatanDini [
-		<!ELEMENT  peringatanDini EMPTY>
-		<!ATTLIST peringatanDini
-		nomor 		ID	#REQUIRED
-		mulai		CDATA	#REQUIRED
-		akhir		CDATA	#REQUIRED
-		pengamatan    CDATA	#REQUIRED
-		peringatan    CDATA   #REQUIRED
-		prakiraan     CDATA   #REQUIRED
-		>
-		]>
-		<peringatanDini nomor=\"$nomor\" mulai=\"$mulai\" akhir=\"$akhir\" pengamatan=\"$pengamatan\" peringatan=\"$peringatan\" prakiraan=\"$prakiraan\" />";
+			$pd = $this->input->post('peringatanDini');
+			$pd = explode("PERINGATAN DINI CUACA" , $pd);
+			$pd = $pd[1];
+			$nomor = explode("NOMOR " , $pd);
+			$nomor = $nomor[1];
+			$nomor = explode("," , $nomor);
+			$nomor = $nomor[0];
+			$mulai = explode("BERLAKU TANGGAL  " , $pd);
+			$mulai = $mulai[1];
+			$mulai = explode(" SAMPAI DENGAN " , $mulai);
+			$mulai = $mulai[0];
 
 
-		//$buka = fopen("home/sysop/Music/event.xml", "w+");
-		$fileXML = base_url('gambar/event.xml');
-		$buka = fopen('PeringatanDini.xml','w');
-		if (!$buka)
-		{
-		echo "<p><b>Data belum terproses. Mohon dicoba lagi</b><p><html>";
-		exit;
+			$akhir = explode("SAMPAI DENGAN " , $pd);
+			$akhir = $akhir[1];
+			$akhir = explode(". BERDASARKAN" , $akhir);
+			$akhir = $akhir[0];
+
+			$pengamatan = explode("PENGAMATAN JAM " , $pd);
+			$pengamatan = $pengamatan[1];
+			$pengamatan = explode("," , $pengamatan);
+			$pengamatan = $pengamatan[0];
+
+			$peringatan = explode($pengamatan.", " , $pd);
+			$peringatan = $peringatan[1];
+			// $peringatan = explode("." , $peringatan);
+			// $peringatan = $peringatan[0];
+
+			// $prakiraan = explode($peringatan.". " , $pd);
+			// $prakiraan = $prakiraan[1];
+			// $prakiraan = explode("." , $prakiraan);
+			// $prakiraan = $prakiraan[0];
+
+			$isi =
+			"<?xml version=\"1.0\" encoding=\"US-ASCII\" standalone=\"yes\"?>
+			<!DOCTYPE peringatanDini [
+			<!ELEMENT  peringatanDini EMPTY>
+			<!ATTLIST peringatanDini
+			nomor 		ID	#REQUIRED
+			mulai		CDATA	#REQUIRED
+			akhir		CDATA	#REQUIRED
+			pengamatan    CDATA	#REQUIRED
+			peringatan    CDATA   #REQUIRED
+			>
+			]>
+			<peringatanDini nomor=\"$nomor\" mulai=\"$mulai\" akhir=\"$akhir\" pengamatan=\"$pengamatan\" peringatan=\"$peringatan\" />";
+
+
+			//$buka = fopen("home/sysop/Music/event.xml", "w+");
+			$fileXML = base_url('gambar/event.xml');
+			$buka = fopen('PeringatanDini.xml','w');
+			if (!$buka)
+			{
+			echo "<p><b>Data belum terproses. Mohon dicoba lagi</b><p><html>";
+			exit;
+			}
+
+			fwrite($buka, $isi);
+			fclose($buka);
 		}
 
-		fwrite($buka, $isi);
-		fclose($buka);
+		// PROSES WINDSHEAR
+		if ($this->input->post("windShear") != NULL) {
+			$ws = $this->input->post('windShear');
+			// echo $ws;
+			// echo "<br>";
+			$ws = explode("PERINGATAN DINI", $ws);
+			$sandi= $ws[0];
+			$ws = $ws[1];
+			$nomor = explode("NOMOR " , $ws);
+			$nomor = $nomor[1];
+			$nomor = explode("," , $nomor);
+			$nomor = $nomor[0];
+			$mulai = explode("BERLAKU TANGGAL  " , $ws);
+			$mulai = $mulai[1];
+			$mulai = explode(" SAMPAI DENGAN " , $mulai);
+			$mulai = $mulai[0];
+		
+			$akhir = explode("SAMPAI DENGAN " , $ws);
+			$akhir = $akhir[1];
+			$akhir = explode(". BERDASARKAN" , $akhir);
+			$akhir = $akhir[0];
+
+			
+			$pengamatan = explode("PENGAMATAN JAM " , $ws);
+			$pengamatan = $pengamatan[1];
+			$pengamatan = explode("," , $pengamatan);
+			$pengamatan = $pengamatan[0];
+
+			$peringatan = explode($pengamatan.", " , $ws);
+			$peringatan = $peringatan[1];
+
+		$isi =
+			"<?xml version=\"1.0\" encoding=\"US-ASCII\" standalone=\"yes\"?>
+			<!DOCTYPE peringatanDini [
+			<!ELEMENT  peringatanDini EMPTY>
+			<!ATTLIST peringatanDini
+			nomor 		ID	#REQUIRED
+			mulai		CDATA	#REQUIRED
+			akhir		CDATA	#REQUIRED
+			pengamatan    CDATA	#REQUIRED
+			peringatan    CDATA   #REQUIRED
+			>
+			]>
+			<peringatanDiniWindShear nomor=\"$nomor\" mulai=\"$mulai\" akhir=\"$akhir\" pengamatan=\"$pengamatan\" peringatan=\"$peringatan\" />";
+
+
+			//$buka = fopen("home/sysop/Music/event.xml", "w+");
+			$fileXML = base_url('gambar/event.xml');
+			$buka = fopen('PeringatanDiniWindShear.xml','w');
+			if (!$buka)
+			{
+			echo "<p><b>Data belum terproses. Mohon dicoba lagi</b><p><html>";
+			exit;
+			}
+
+			fwrite($buka, $isi);
+			fclose($buka);
+
+		}
+
 
 		// $this->load->view('petir/prosesPD',$data,false);	
-		// $url = base_url('PeringatanDini.xml');
-		// header("Location: $url");
+		$url = base_url('PeringatanDini.xml');
+		header("Location: $url");
 
-		redirect('auth/logout');
+		// redirect('auth/logout');
 	}
 
 

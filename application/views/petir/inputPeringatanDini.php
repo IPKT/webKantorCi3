@@ -19,9 +19,14 @@
    <?php echo form_open_multipart('web/prosesDataPD')?>
    <form>
         <div class="mb-3">
-            <label for="PeringaranDini" class="form-label">Peringatan Dini Ngurah Rai Airport</label>
+            <label for="PeringaranDini" class="form-label">Peringatan Dini Cuaca</label>
             <textarea class="form-control textAreaMultiline" name="peringatanDini" rows="8"
-            placeholder="Masukan Narasi Peringatan Dini "></textarea>
+            placeholder="Masukan Narasi Peringatan Dini Cuaca "></textarea>
+        </div>
+        <div class="mb-3">
+            <label for="PeringaranDini" class="form-label">Peringatan Dini (Wind Shear)</label>
+            <textarea class="form-control textAreaMultiline" name="windShear" rows="8"
+            placeholder="Masukan Peringatan Dini Wind Shear "></textarea>
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="US-ASCII" standalone="yes"?>
+			<!DOCTYPE peringatanDini [
+			<!ELEMENT  peringatanDini EMPTY>
+			<!ATTLIST peringatanDini
+			nomor 		ID	#REQUIRED
+			mulai		CDATA	#REQUIRED
+			akhir		CDATA	#REQUIRED
+			pengamatan    CDATA	#REQUIRED
+			peringatan    CDATA   #REQUIRED
+			>
+			]>
+			<peringatanDiniWindShear nomor="1" mulai="22 FEBRUARI 2024 JAM 19.59 WITA" akhir=" 22 FEBRUARI 2024 JAM 20.14 WITA" pengamatan="19.59 WITA" peringatan="TERJADI WIND SHEAR PADA RUNWAY 27, ANGIN PERMUKAAN DARI ARAH 230⁰ DENGAN KECEPATAN 08 KNOT, ANGIN KETINGGIAN 1000 FEET DARI ARAH 220⁰ DENGAN KECEPATAN 08 KNOT, ANGIN KETINGGIAN 2000 FEET DARI ARAH 300⁰ DENGAN KECEPATAN 20 KNOT." />
