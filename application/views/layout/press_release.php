@@ -18,32 +18,32 @@
         </div>
         <div class="card mb-2">
             <div class="card-body">
-                <h5 class="card-title">Gempabumi Wilayah Bali dan Sekitarnya periode 26 Juli - 01 Agustus 2024
+                <h5 class="card-title"> Gempabumi Wilayah Bali dan Sekitarnya periode periode 02 - 08 Agustus 2024
                 </h5>
-                <p class="card-text">Berdasarkan data Stasiun Geofisika Denpasar selama minggu ke-5 bulan Juli 2024, di
-                    daerah Bali dan sekitarnya telah terjadi 40 kejadian gempabumi dengan magnitudo bervariasi mulai
-                    dari M 1.7 sampai M 3.8 yang didominasi oleh kejadian gempabumi dengan magnitudo M < 3... ....</p>
-                        <a href="<?php echo base_url('artikel/20240802_1') ?>"
+                <p class="card-text">Berdasarkan data Stasiun Geofisika Denpasar selama minggu ke-1 bulan Agustus 2024,
+                    di daerah Bali dan sekitarnya telah terjadi 27 kejadian gempabumi dengan magnitudo bervariasi mulai
+                    dari M 1.4 sampai M 4.1 yang didominasi oleh kejadian gempabumi dengan magnitudo M < 3. ....</p>
+                        <a href="<?php echo base_url('artikel/20240809_1') ?>"
                             class="btn btn-primary btn-sm">Selengkapnya</a>
             </div>
         </div>
         <div class="card mb-2">
             <div class="card-body">
-                <h5 class="card-title">Terbit dan Terbenam Bali dan Sekitarnya Periode 5 - 11 Agustus 2024
+                <h5 class="card-title">Terbit dan Terbenam Bali dan Sekitarnya Periode 12 - 18 Agustus 2024
                 </h5>
-                <p class="card-text">Berdasarkan data Almanak BMKG selama 5 - 11 Agustus 2024, waktu terbit dan terbenam
-                    matahari di kota dan kabupaten di Bali bervariasi per harinya. Variasi waktu terbit dan terbenam
-                    matahari dipengaruhi oleh letak suatu tempat....... </p>
-                <a href="<?php echo base_url('artikel/20240802_2') ?>" class="btn btn-primary btn-sm">Selengkapnya</a>
+                <p class="card-text">Berdasarkan data Almanak BMKG selama 12 - 18 Agustus 2024, waktu terbit dan
+                    terbenam matahari di kota dan kabupaten di Bali bervariasi per harinya. Variasi waktu terbit dan
+                    terbenam matahari dipengaruhi oleh letak suatu tempat....... </p>
+                <a href="<?php echo base_url('artikel/20240809_2') ?>" class="btn btn-primary btn-sm">Selengkapnya</a>
             </div>
         </div>
         <div class="card mb-2">
             <div class="card-body">
-                <h5 class="card-title">Sambaran Petir di Wilayah Bali Periode 26 Juli - 1 Agustus 2024
+                <h5 class="card-title">Sambaran Petir di Wilayah Bali Periode 2- 8 Agustus 2024
                 </h5>
-                <p class="card-text">Berdasarkan peta kerapatan sambaran petir wilayah Bali periode 26 Juli - 1 Agustus
-                    2024, aktivitas petir terjadi di wilayah Bali dengan termasuk dalam kategori Rendah < 8. ..... </p>
-                        <a href="<?php echo base_url('artikel/20240802_3') ?>"
+                <p class="card-text">Berdasarkan peta kerapatan sambaran petir wilayah Bali periode 2 - 8 Agustus 2024,
+                    aktivitas petir terjadi di wilayah Bali dengan termasuk dalam kategori Rendah < 8...... </p>
+                        <a href="<?php echo base_url('artikel/20240809_3') ?>"
                             class="btn btn-primary btn-sm">Selengkapnya</a>
             </div>
         </div>

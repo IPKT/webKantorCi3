@@ -1,5 +1,5 @@
 <div class="container">
-    <h3 class="text-center">Gempabumi Wilayah Bali dan Sekitarnya periode periode 26 Juli - 01 Agustus 2024
+    <h3 class="text-center">Gempabumi Wilayah Bali dan Sekitarnya periode 26 Juli - 01 Agustus 2024
     </h3>
     <div class="container d-flex justify-content-center">
         <img width="80%" src="<?php echo  base_url('gambar/artikel/artikel_20240802_1_1.png') ?>" alt="">
