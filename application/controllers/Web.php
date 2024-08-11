@@ -26,6 +26,7 @@ class Web extends CI_Controller {
 		$this->load->view('layout/template_beranda',$data,false);	
 	}
 
+	//BERANDA
 	public function beranda(){
 		$data = array(
 			'page' => 'profil/beranda',
@@ -102,7 +103,7 @@ class Web extends CI_Controller {
 		$this->load->view('layout/template',$data,false);	
 	}
 
-	// Publikasi
+	// PUBLIKASI
 	public function buletin(){
 		$data = array(
 			'page' => 'publikasi/buletin',
@@ -152,174 +153,10 @@ class Web extends CI_Controller {
 		echo "hahaha";
     }
 
-	//input Page Peringatan Dini Ngurah Rai
+	//INPUT PAGE PERINGATAN DINI
 	public function inputPD(){
-		// if (
-		// 	$this->session->userdata('username') == null
-		// 	) {
-		// 	   redirect('auth/login_page');
-		// 	}
 		$this->load->view('petir/inputPeringatanDini',false);	
 	}
-
-	public function prosesDataPDLama(){
-		// if (
-		// 	$this->session->userdata('username') == null
-		// 	) {
-		// 	   redirect('auth');
-		// 	}
-		// $pd = $this->input->post('peringatanDini');
-		// $pd = explode("PERINGATAN DINI CUACA" , $pd)[1];
-		// $nomor = explode("NOMOR " , $pd)[1];
-		// $nomor = explode("," , $nomor)[0];
-		// $mulai = explode("BERLAKU TANGGAL  " , $pd)[1];
-		// $mulai = explode(" SAMPAI DENGAN " , $mulai)[0];
-
-		// $akhir = explode("SAMPAI DENGAN " , $pd)[1];
-		// $akhir = explode(". BERDASARKAN" , $akhir)[0];
-
-		// $pengamatan = explode("PENGAMATAN JAM " , $pd)[1];
-		// $pengamatan = explode("," , $pengamatan)[0];
-
-		// $peringatan = explode($pengamatan.", " , $pd)[1];
-		// $peringatan = explode("." , $peringatan)[0];
-
-		// $prakiraan = explode($peringatan.". " , $pd)[1];
-		// $prakiraan = explode("." , $prakiraan)[0];
-
-
-		// PROSES PERINGATAN DINI CUACA
-		if ($this->input->post('peringatanDini') != NULL) {
-
-			$pd = $this->input->post('peringatanDini');
-			$pd = explode("PERINGATAN DINI CUACA" , $pd);
-			$pd = $pd[1];
-			$nomor = explode("NOMOR " , $pd);
-			$nomor = $nomor[1];
-			$nomor = explode("," , $nomor);
-			$nomor = $nomor[0];
-			$mulai = explode("BERLAKU TANGGAL  " , $pd);
-			$mulai = $mulai[1];
-			$mulai = explode(" SAMPAI DENGAN " , $mulai);
-			$mulai = $mulai[0];
-
-
-			$akhir = explode("SAMPAI DENGAN " , $pd);
-			$akhir = $akhir[1];
-			$akhir = explode(". BERDASARKAN" , $akhir);
-			$akhir = $akhir[0];
-
-			$pengamatan = explode("PENGAMATAN JAM " , $pd);
-			$pengamatan = $pengamatan[1];
-			$pengamatan = explode("," , $pengamatan);
-			$pengamatan = $pengamatan[0];
-
-			$peringatan = explode($pengamatan.", " , $pd);
-			$peringatan = $peringatan[1];
-			// $peringatan = explode("." , $peringatan);
-			// $peringatan = $peringatan[0];
-
-			// $prakiraan = explode($peringatan.". " , $pd);
-			// $prakiraan = $prakiraan[1];
-			// $prakiraan = explode("." , $prakiraan);
-			// $prakiraan = $prakiraan[0];
-
-			$isi =
-			"<?xml version=\"1.0\" encoding=\"US-ASCII\" standalone=\"yes\"?>
-			<!DOCTYPE peringatanDini [
-			<!ELEMENT  peringatanDini EMPTY>
-			<!ATTLIST peringatanDini
-			nomor 		ID	#REQUIRED
-			mulai		CDATA	#REQUIRED
-			akhir		CDATA	#REQUIRED
-			pengamatan    CDATA	#REQUIRED
-			peringatan    CDATA   #REQUIRED
-			>
-			]>
-			<peringatanDini nomor=\"$nomor\" mulai=\"$mulai\" akhir=\"$akhir\" pengamatan=\"$pengamatan\" peringatan=\"$peringatan\" />";
-
-
-			//$buka = fopen("home/sysop/Music/event.xml", "w+");
-			$fileXML = base_url('gambar/event.xml');
-			$buka = fopen('PeringatanDini.xml','w');
-			if (!$buka)
-			{
-			echo "<p><b>Data belum terproses. Mohon dicoba lagi</b><p><html>";
-			exit;
-			}
-
-			fwrite($buka, $isi);
-			fclose($buka);
-		}
-
-		// PROSES WINDSHEAR
-		if ($this->input->post("windShear") != NULL) {
-			$ws = $this->input->post('windShear');
-			// echo $ws;
-			// echo "<br>";
-			$ws = explode("PERINGATAN DINI", $ws);
-			$sandi= $ws[0];
-			$ws = $ws[1];
-			$nomor = explode("NOMOR " , $ws);
-			$nomor = $nomor[1];
-			$nomor = explode("," , $nomor);
-			$nomor = $nomor[0];
-			$mulai = explode("BERLAKU TANGGAL  " , $ws);
-			$mulai = $mulai[1];
-			$mulai = explode(" SAMPAI DENGAN " , $mulai);
-			$mulai = $mulai[0];
-		
-			$akhir = explode("SAMPAI DENGAN " , $ws);
-			$akhir = $akhir[1];
-			$akhir = explode(". BERDASARKAN" , $akhir);
-			$akhir = $akhir[0];
-
-			
-			$pengamatan = explode("PENGAMATAN JAM " , $ws);
-			$pengamatan = $pengamatan[1];
-			$pengamatan = explode("," , $pengamatan);
-			$pengamatan = $pengamatan[0];
-
-			$peringatan = explode($pengamatan.", " , $ws);
-			$peringatan = $peringatan[1];
-
-		$isi =
-			"<?xml version=\"1.0\" encoding=\"US-ASCII\" standalone=\"yes\"?>
-			<!DOCTYPE peringatanDini [
-			<!ELEMENT  peringatanDini EMPTY>
-			<!ATTLIST peringatanDini
-			nomor 		ID	#REQUIRED
-			mulai		CDATA	#REQUIRED
-			akhir		CDATA	#REQUIRED
-			pengamatan    CDATA	#REQUIRED
-			peringatan    CDATA   #REQUIRED
-			>
-			]>
-			<peringatanDiniWindShear nomor=\"$nomor\" mulai=\"$mulai\" akhir=\"$akhir\" pengamatan=\"$pengamatan\" peringatan=\"$peringatan\" />";
-
-
-			//$buka = fopen("home/sysop/Music/event.xml", "w+");
-			$fileXML = base_url('gambar/event.xml');
-			$buka = fopen('PeringatanDiniWindShear.xml','w');
-			if (!$buka)
-			{
-			echo "<p><b>Data belum terproses. Mohon dicoba lagi</b><p><html>";
-			exit;
-			}
-
-			fwrite($buka, $isi);
-			fclose($buka);
-
-		}
-
-
-		// $this->load->view('petir/prosesPD',$data,false);	
-		$url = base_url('PeringatanDini.xml');
-		header("Location: $url");
-
-		// redirect('auth/logout');
-	}
-
 
 	public function createXmlCuaca(){
 		$nomor = "1";
@@ -494,11 +331,6 @@ class Web extends CI_Controller {
 			}
 			
 		}
-
-
-		// $url = base_url('xml/PeringatanDiniCuaca.xml');
-		// header("Location: $url");
-
 
 		if ($status_pd_cuaca == "sukses" || $status_pd_ws =="sukses") {
 			$this->load->view('petir/showXml',false);	
