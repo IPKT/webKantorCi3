@@ -14,5 +14,5 @@
 
     </p>
 
-    <p>Salam sehat dan semangat. <br>Jumat, 15 Agustus 2024 </p>
+    <p>Salam sehat dan semangat. <br>Jumat, 16 Agustus 2024 </p>
 </div>
