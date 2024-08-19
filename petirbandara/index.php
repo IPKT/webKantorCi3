@@ -123,10 +123,10 @@
       <?php 
          $data = simplexml_load_file("https://stageof-bali.bmkg.go.id/xml/PeringatanDiniCuaca.xml") or die("Gagal mengakses!"); 
          ?>
-  PERINGATAN DINI CUACA WILAYAH BANDAR UDARA I GUSTI NGURAH RAI NOMOR <?=$data->Nomor?>, 
-		</br>BERLAKU TANGGAL  <?=$data->Mulai?> SAMPAI DENGAN  <?=$data->Akhir?>. 
-		</br>BERDASARKAN PENGAMATAN JAM <?=$data->Pengamatan?>, <?=$data->Peringatan?>.
-		</br><?=$data->Prakiraan?>
+  PERINGATAN DINI CUACA WILAYAH BANDAR UDARA I GUSTI NGURAH RAI NOMOR <?php echo $data->Nomor?>, 
+		</br>BERLAKU TANGGAL  <?php echo $data->Mulai?> SAMPAI DENGAN  <?php echo $data->Akhir?>. 
+		</br>BERDASARKAN PENGAMATAN JAM <?php echo $data->Pengamatan?>, <?php echo $data->Peringatan?>.
+		</br><?php echo $data->Prakiraan?>
 		</br>SUMBER; STASIUN METEOROLOGI I GUSTI NGURAH RAI.
 	</h3>
 	<!-- selesai edit, Note: kalau mau tambah enter pakai </br> di akhir kata mau di enter -->
