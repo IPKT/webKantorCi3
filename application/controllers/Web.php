@@ -218,6 +218,9 @@ class Web extends CI_Controller {
 
 		$peringatan = explode($pengamatan.", " , $pd);
 		$peringatan = $peringatan[1];
+		$peringatan = explode(". " , $peringatan);
+		$prakiraan = $peringatan[1];
+		$peringatan = $peringatan[0];
 
 		$dom = new DOMDocument();
 		$dom->encoding = 'utf-8';
@@ -237,6 +240,8 @@ class Web extends CI_Controller {
 		$root->appendChild($pengamatan_node);
 		$peringatan_node = $dom->createElement('Peringatan', $peringatan);
 		$root->appendChild($peringatan_node);
+		$prakiraan_node = $dom->createElement('Prakiraan', $prakiraan);
+		$root->appendChild($prakiraan_node);
 		$sandi_node = $dom->createElement('Sandi', $sandi);
 		$root->appendChild($sandi_node);
 		$dom->appendChild($root);

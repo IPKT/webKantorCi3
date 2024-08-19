@@ -120,10 +120,13 @@
       <div class="col-md-12 col-sm-12 col-xs-12">
         <!-- edit info cuaca dari bandara di bawah ini ya-->
 	<h3 style="text-align: center" class="blink">
-		PERINGATAN DINI CUACA WILAYAH BANDAR UDARA I GUSTI NGURAH RAI NOMOR 5, 
-		</br>BERLAKU TANGGAL  12 APRIL 2023 JAM 05.55 WITA SAMPAI DENGAN  12 APRIL 2023 JAM 07.25 WITA. 
-		</br>BERDASARKAN PENGAMATAN JAM 05.55 WITA, TERJADI HUJAN SEDANG HINGGA LEBAT.
-		</br>DIPRAKIRAKAN INTENSITAS TETAP.
+      <?php 
+         $data = simplexml_load_file("https://stageof-bali.bmkg.go.id/xml/PeringatanDiniCuaca.xml") or die("Gagal mengakses!"); 
+         ?>
+  PERINGATAN DINI CUACA WILAYAH BANDAR UDARA I GUSTI NGURAH RAI NOMOR <?=$data->Nomor?>, 
+		</br>BERLAKU TANGGAL  <?=$data->Mulai?> SAMPAI DENGAN  <?=$data->Akhir?>. 
+		</br>BERDASARKAN PENGAMATAN JAM <?=$data->Pengamatan?>, <?=$data->Peringatan?>.
+		</br><?=$data->Prakiraan?>
 		</br>SUMBER; STASIUN METEOROLOGI I GUSTI NGURAH RAI.
 	</h3>
 	<!-- selesai edit, Note: kalau mau tambah enter pakai </br> di akhir kata mau di enter -->
