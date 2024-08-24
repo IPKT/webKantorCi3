@@ -5,6 +5,8 @@
         </div>
     </div>
 
+    <div class="card-body p-2">
+        
 
         <div class="card my-2">
             <img width="50%" class="card-img-top"
