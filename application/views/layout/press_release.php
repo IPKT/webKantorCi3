@@ -30,7 +30,7 @@
             <div class="card-body">
                 <h5 class="card-title">Terbit dan Terbenam Bali dan Sekitarnya Periode 23 - 29 September 2024
                 </h5>
-                <p class="card-text">Berdasarkan data Almanak BMKG selama 26 Agustus - 1 September 2024, waktu terbit
+                <p class="card-text">Berdasarkan data Almanak BMKG selama 23 - 29 September 2024, waktu terbit
                     dan terbenam matahari di kota dan kabupaten di Bali bervariasi per harinya. Variasi waktu terbit dan
                     terbenam matahari dipengaruhi oleh letak suatu tempat. ...... </p>
                 <a href="<?php echo base_url('artikel/20240920_2') ?>" class="btn btn-primary btn-sm">Selengkapnya</a>
