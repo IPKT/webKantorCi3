@@ -6,8 +6,187 @@
     </div>
 
     <div class="card-body p-2">
-        
+        <!-- 20 September 2024 -->
 
+        <div class="card my-2">
+            <img width="50%" class="card-img-top"
+                src="<?php echo  base_url('gambar/artikel/artikel_20240920_1_1.png') ?>" alt="">
+            <div class="card-body">
+                <h5 class="card-title">Infografis Gempabumi Wilayah Bali dan Sekitarnya periode periode 13 -19
+                    September
+                    2024
+                </h5>
+                <p class="card-text">Berdasarkan data Stasiun Geofisika Denpasar selama minggu ke-3 bulan September
+                    2024, di daerah Bali dan sekitarnya telah terjadi 27 kejadian gempabumi dengan magnitudo bervariasi
+                    mulai dari M 1.7 sampai M 4.4.... </p>
+                <a href="<?php echo base_url('artikel/20240920_1') ?>" class="btn btn-primary btn-sm">Selengkapnya</a>
+            </div>
+        </div>
+        <div class="card my-2">
+            <img width="50%" class="card-img-top"
+                src="<?php echo  base_url('gambar/artikel/artikel_20240920_2_1.png') ?>" alt="">
+            <div class="card-body">
+                <h5 class="card-title">Infografis Terbit dan Terbenam Bali dan Sekitarnya Periode 23 -29
+                    September 2024
+                </h5>
+                <p class="card-text">Berdasarkan data Almanak BMKG selama 23 -29 September 2024, waktu terbit dan
+                    terbenam matahari di kota dan kabupaten di Bali bervariasi per harinya. Variasi waktu terbit dan
+                    terbenam matahari dipengaruhi oleh letak suatu tempat. ...
+                </p>
+
+                <a href="<?php echo base_url('artikel/20240920_2') ?>" class="btn btn-primary btn-sm">Selengkapnya</a>
+            </div>
+        </div>
+        <div class="card my-2">
+            <img width="50%" class="card-img-top"
+                src="<?php echo  base_url('gambar/artikel/artikel_20240920_3_1.png') ?>" alt="">
+            <div class="card-body">
+                <h5 class="card-title">Informasi Sambaran Petir di Wilayah Bali Periode 13 -19 September 2024
+                </h5>
+                <p class="card-text">
+                    Berdasarkan peta kerapatan sambaran petir wilayah Bali periode 13 - 19 September 2024, aktivitas
+                    petir terjadi di wilayah Bali dengan termasuk dalam kategori Rendah < 8. ....</p>
+
+                        <a href="<?php echo base_url('artikel/20240920_3') ?>"
+                            class="btn btn-primary btn-sm">Selengkapnya</a>
+            </div>
+        </div>
+
+        <!-- 13 September 2024-->
+        <div class="card my-2">
+            <img width="50%" class="card-img-top"
+                src="<?php echo  base_url('gambar/artikel/artikel_20240913_1_1.png') ?>" alt="">
+            <div class="card-body">
+                <h5 class="card-title">Infografis Gempabumi Wilayah Bali dan Sekitarnya periode periode 6 - 12
+                    September
+                    2024
+                </h5>
+                <p class="card-text">Berdasarkan data Stasiun Geofisika Denpasar selama minggu ke-2 bulan September
+                    2024, di daerah Bali dan sekitarnya telah terjadi 33 kejadian gempabumi dengan magnitudo bervariasi
+                    mulai dari M 1.4 sampai M 4.9.... </p>
+                <a href="<?php echo base_url('artikel/20240913_1') ?>" class="btn btn-primary btn-sm">Selengkapnya</a>
+            </div>
+        </div>
+        <div class="card my-2">
+            <img width="50%" class="card-img-top"
+                src="<?php echo  base_url('gambar/artikel/artikel_20240913_2_1.png') ?>" alt="">
+            <div class="card-body">
+                <h5 class="card-title">Infografis Terbit dan Terbenam Bali dan Sekitarnya Periode 16 - 22
+                    September 2024
+                </h5>
+                <p class="card-text">Berdasarkan data Almanak BMKG selama 16 - 22 September 2024, waktu terbit dan
+                    terbenam matahari di kota dan kabupaten di Bali bervariasi per harinya. Variasi waktu terbit dan
+                    terbenam matahari dipengaruhi oleh letak suatu tempat. ...
+                </p>
+
+                <a href="<?php echo base_url('artikel/20240913_2') ?>" class="btn btn-primary btn-sm">Selengkapnya</a>
+            </div>
+        </div>
+        <div class="card my-2">
+            <img width="50%" class="card-img-top"
+                src="<?php echo  base_url('gambar/artikel/artikel_20240913_3_1.png') ?>" alt="">
+            <div class="card-body">
+                <h5 class="card-title">Informasi Sambaran Petir di Wilayah Bali Periode 6 12 September 2024
+                </h5>
+                <p class="card-text">Berdasarkan peta kerapatan sambaran petir wilayah Bali periode 6 - 12 September
+                    2024, aktivitas petir terjadi di wilayah Bali dengan termasuk dalam kategori Rendah < 8.....</p>
+
+                        <a href="<?php echo base_url('artikel/20240913_3') ?>"
+                            class="btn btn-primary btn-sm">Selengkapnya</a>
+            </div>
+        </div>
+
+        <!-- 6 September 2024 -->
+        <div class="card my-2">
+            <img width="50%" class="card-img-top"
+                src="<?php echo  base_url('gambar/artikel/artikel_20240906_1_1.png') ?>" alt="">
+            <div class="card-body">
+                <h5 class="card-title">Infografis Gempabumi Wilayah Bali dan Sekitarnya periode periode 30 Agustus - 05
+                    September
+                    2024
+                </h5>
+                <p class="card-text">Berdasarkan data Stasiun Geofisika Denpasar selama minggu ke-1 bulan September
+                    2024, di daerah Bali dan sekitarnya telah terjadi 33 kejadian gempabumi dengan magnitudo bervariasi
+                    mulai dari M 1.4 sampai M 3.4........ </p>
+                <a href="<?php echo base_url('artikel/20240906_1') ?>" class="btn btn-primary btn-sm">Selengkapnya</a>
+            </div>
+        </div>
+        <div class="card my-2">
+            <img width="50%" class="card-img-top"
+                src="<?php echo  base_url('gambar/artikel/artikel_20240906_2_1.png') ?>" alt="">
+            <div class="card-body">
+                <h5 class="card-title">Infografis Terbit dan Terbenam Bali dan Sekitarnya Periode 9 - 15
+                    September 2024
+                </h5>
+                <p class="card-text">Berdasarkan data Almanak BMKG selama 9 - 15 September 2024, waktu terbit dan
+                    terbenam matahari di kota dan kabupaten di Bali bervariasi per harinya. Variasi waktu terbit dan
+                    terbenam matahari dipengaruhi oleh letak suatu tempat. ...
+                </p>
+
+                <a href="<?php echo base_url('artikel/20240906_2') ?>" class="btn btn-primary btn-sm">Selengkapnya</a>
+            </div>
+        </div>
+        <div class="card my-2">
+            <img width="50%" class="card-img-top"
+                src="<?php echo  base_url('gambar/artikel/artikel_20240906_3_1.png') ?>" alt="">
+            <div class="card-body">
+                <h5 class="card-title">Informasi Sambaran Petir di Wilayah Bali Periode 30 Agustus - 5 September 2024
+                </h5>
+                <p class="card-text">Berdasarkan peta kerapatan sambaran petir wilayah Bali periode 30 Agustus - 5
+                    September, aktivitas petir terjadi di wilayah Bali dengan termasuk dalam kategori Rendah <
+                        8.....</p>
+
+                        <a href="<?php echo base_url('artikel/20240906_3') ?>"
+                            class="btn btn-primary btn-sm">Selengkapnya</a>
+            </div>
+        </div>
+
+        <!-- 30 Agustus 2024 -->
+        <div class="card my-2">
+            <img width="50%" class="card-img-top"
+                src="<?php echo  base_url('gambar/artikel/artikel_20240830_1_1.png') ?>" alt="">
+            <div class="card-body">
+                <h5 class="card-title">Infografis Gempabumi Wilayah Bali dan Sekitarnya periode periode 23 - 29 Agustus
+                    2024
+                </h5>
+                <p class="card-text">Berdasarkan data Stasiun Geofisika Denpasar selama minggu ke-4 bulan Agustus 2024,
+                    di daerah Bali dan sekitarnya
+                    telah terjadi 30 kejadian gempabumi dengan magnitudo bervariasi mulai dari M 1.6 sampai M 3.4
+                    ....... </p>
+                <a href="<?php echo base_url('artikel/20240830_1') ?>" class="btn btn-primary btn-sm">Selengkapnya</a>
+            </div>
+        </div>
+        <div class="card my-2">
+            <img width="50%" class="card-img-top"
+                src="<?php echo  base_url('gambar/artikel/artikel_20240830_2_1.png') ?>" alt="">
+            <div class="card-body">
+                <h5 class="card-title">Infografis Terbit dan Terbenam Bali dan Sekitarnya Periode 2 - 8
+                    September 2024
+                </h5>
+                <p class="card-text">Berdasarkan data Almanak BMKG selama 2 - 8 September 2024, waktu terbit
+                    dan terbenam matahari di kota dan kabupaten di Bali bervariasi per harinya. Variasi waktu terbit dan
+                    terbenam matahari dipengaruhi oleh letak suatu tempat. ...
+                </p>
+
+                <a href="<?php echo base_url('artikel/20240830_2') ?>" class="btn btn-primary btn-sm">Selengkapnya</a>
+            </div>
+        </div>
+        <div class="card my-2">
+            <img width="50%" class="card-img-top"
+                src="<?php echo  base_url('gambar/artikel/artikel_20240830_3_1.png') ?>" alt="">
+            <div class="card-body">
+                <h5 class="card-title">Informasi Sambaran Petir di Wilayah Bali Periode 23 -29 Agustus 2024</h5>
+                <p class="card-text">Berdasarkan peta kerapatan sambaran petir wilayah Bali periode 23 - 29 Agustus,
+                    aktivitas petir terjadi di
+                    wilayah Bali dengan termasuk dalam kategori Rendah < 8.. ....</p>
+
+                        <a href="<?php echo base_url('artikel/20240830_3') ?>"
+                            class="btn btn-primary btn-sm">Selengkapnya</a>
+            </div>
+        </div>
+
+
+        <!-- 23 Agustus 2024 -->
         <div class="card my-2">
             <img width="50%" class="card-img-top"
                 src="<?php echo  base_url('gambar/artikel/artikel_20240823_1_1.png') ?>" alt="">
@@ -67,8 +246,7 @@
                     di daerah Bali dan sekitarnya telah terjadi 28 kejadian gempabumi dengan magnitudo bervariasi
                     mulai
                     dari M 1.4 sampai M 4.9. ..... </p>
-                <a href="<?php echo base_url('artikel/20240816_1') ?>"
-                    class="btn btn-primary btn-sm">Selengkapnya</a>
+                <a href="<?php echo base_url('artikel/20240816_1') ?>" class="btn btn-primary btn-sm">Selengkapnya</a>
             </div>
         </div>
         <div class="card my-2">
@@ -83,8 +261,7 @@
                     terbenam matahari dipengaruhi oleh letak suatu tempat....
                 </p>
 
-                <a href="<?php echo base_url('artikel/20240816_2') ?>"
-                    class="btn btn-primary btn-sm">Selengkapnya</a>
+                <a href="<?php echo base_url('artikel/20240816_2') ?>" class="btn btn-primary btn-sm">Selengkapnya</a>
             </div>
         </div>
         <div class="card my-2">
@@ -118,8 +295,7 @@
                     di
                     daerah Bali dan sekitarnya telah terjadi 40 kejadian gempabumi dengan magnitudo bervariasi
                     mulai
-                    dari M 1.7 sampai M 3.8 yang didominasi oleh kejadian gempabumi dengan magnitudo M < 3.
-                        ..... </p>
+                    dari M 1.7 sampai M 3.8 yang didominasi oleh kejadian gempabumi dengan magnitudo M < 3. ..... </p>
                         <a href="<?php echo base_url('artikel/20240802_1') ?>"
                             class="btn btn-primary btn-sm">Selengkapnya</a>
             </div>
@@ -138,8 +314,7 @@
                     matahari dipengaruhi oleh letak suatu tempat......
                 </p>
 
-                <a href="<?php echo base_url('artikel/20240802_2') ?>"
-                    class="btn btn-primary btn-sm">Selengkapnya</a>
+                <a href="<?php echo base_url('artikel/20240802_2') ?>" class="btn btn-primary btn-sm">Selengkapnya</a>
             </div>
         </div>
         <div class="card my-2">
@@ -150,8 +325,7 @@
                 </h5>
                 <p class="card-text">Berdasarkan peta kerapatan sambaran petir wilayah Bali periode 26 Juli - 1
                     Agustus
-                    2024, aktivitas petir terjadi di wilayah Bali dengan termasuk dalam kategori Rendah < 8.
-                        ....</p>
+                    2024, aktivitas petir terjadi di wilayah Bali dengan termasuk dalam kategori Rendah < 8. ....</p>
 
                         <a href="<?php echo base_url('artikel/20240802_3') ?>"
                             class="btn btn-primary btn-sm">Selengkapnya</a>
@@ -178,8 +352,7 @@
                     Agustus 2024,
                     di daerah Bali dan sekitarnya telah terjadi 27 kejadian gempabumi dengan magnitudo
                     bervariasi mulai
-                    dari M 1.4 sampai M 4.1 yang didominasi oleh kejadian gempabumi dengan magnitudo M <
-                        3. ..... </p>
+                    dari M 1.4 sampai M 4.1 yang didominasi oleh kejadian gempabumi dengan magnitudo M < 3. ..... </p>
                         <a href="<?php echo base_url('artikel/20240809_1') ?>"
                             class="btn btn-primary btn-sm">Selengkapnya</a>
             </div>
@@ -201,8 +374,7 @@
                     terbenam matahari dipengaruhi oleh letak suatu tempat.....
                 </p>
 
-                <a href="<?php echo base_url('artikel/20240809_2') ?>"
-                    class="btn btn-primary btn-sm">Selengkapnya</a>
+                <a href="<?php echo base_url('artikel/20240809_2') ?>" class="btn btn-primary btn-sm">Selengkapnya</a>
             </div>
         </div>
         <div class="card my-2">
@@ -215,8 +387,7 @@
                 <p class="card-text">Berdasarkan peta kerapatan sambaran petir wilayah Bali periode 2 -
                     8
                     Agustus 2024,
-                    aktivitas petir terjadi di wilayah Bali dengan termasuk dalam kategori Rendah < 8..
-                        ....</p>
+                    aktivitas petir terjadi di wilayah Bali dengan termasuk dalam kategori Rendah < 8.. ....</p>
 
                         <a href="<?php echo base_url('artikel/20240809_3') ?>"
                             class="btn btn-primary btn-sm">Selengkapnya</a>
@@ -265,8 +436,7 @@
                     matahari dipengaruhi oleh letak suatu tempat......
                 </p>
 
-                <a href="<?php echo base_url('artikel/20240802_2') ?>"
-                    class="btn btn-primary btn-sm">Selengkapnya</a>
+                <a href="<?php echo base_url('artikel/20240802_2') ?>" class="btn btn-primary btn-sm">Selengkapnya</a>
             </div>
         </div>
         <div class="card my-2">
@@ -338,8 +508,7 @@
                     terbenam matahari dipengaruhi oleh letak suatu tempat. .....
                 </p>
 
-                <a href="<?php echo base_url('artikel/20240726_2') ?>"
-                    class="btn btn-primary btn-sm">Selengkapnya</a>
+                <a href="<?php echo base_url('artikel/20240726_2') ?>" class="btn btn-primary btn-sm">Selengkapnya</a>
             </div>
         </div>
         <div class="card my-2">
@@ -411,8 +580,7 @@
                     matahari dipengaruhi oleh letak suatu tempat. .....
                 </p>
 
-                <a href="<?php echo base_url('artikel/20240719_2') ?>"
-                    class="btn btn-primary btn-sm">Selengkapnya</a>
+                <a href="<?php echo base_url('artikel/20240719_2') ?>" class="btn btn-primary btn-sm">Selengkapnya</a>
             </div>
         </div>
         <div class="card my-2">
@@ -440,8 +608,8 @@
 
 
         <div class="card my-2">
-            <img width="50%" class="card-img-top"
-                src="<?php echo  base_url('gambar/artikel/artikel_20240626_1.jpg') ?>" alt="">
+            <img width="50%" class="card-img-top" src="<?php echo  base_url('gambar/artikel/artikel_20240626_1.jpg') ?>"
+                alt="">
             <div class="card-body">
                 <h5 class="card-title">BMKG Denpasar melaksanakan SLG di wilayah Kusamba</h5>
                 <p class="card-text">Wilayah Kusamba merupakan wilayah yang rawan terhadap
@@ -464,14 +632,12 @@
                     Banyuwangi.
                 </p>
 
-                <a href="<?php echo base_url('artikel/20240626') ?>"
-                    class="btn btn-primary btn-sm">Selengkapnya</a>
+                <a href="<?php echo base_url('artikel/20240626') ?>" class="btn btn-primary btn-sm">Selengkapnya</a>
             </div>
         </div>
 
         <div class="card my-2">
-            <img class="card-img-top"
-                src="<?php echo  base_url('gambar/artikel/artikel_20230208_1.jpg') ?>" alt="">
+            <img class="card-img-top" src="<?php echo  base_url('gambar/artikel/artikel_20230208_1.jpg') ?>" alt="">
             <div class="card-body">
                 <h5 class="card-title">Stasiun Geofisika Denpasar dalam Simulasi Kesiapsiagaan
                     Gempabumi dan
@@ -498,14 +664,12 @@
                     untuk kesiapsiagaan bencana serta penerapan kajian Evakuasi Golden Time dari
                     BMKG. </p>
 
-                <a href="<?php echo base_url('artikel/20230427') ?>"
-                    class="btn btn-primary btn-sm">Selengkapnya</a>
+                <a href="<?php echo base_url('artikel/20230427') ?>" class="btn btn-primary btn-sm">Selengkapnya</a>
             </div>
         </div>
 
         <div class="card my-2">
-            <img class="card-img-top"
-                src="<?php echo  base_url('gambar/artikel/artikel_20230905_1.jpg') ?>" alt="">
+            <img class="card-img-top" src="<?php echo  base_url('gambar/artikel/artikel_20230905_1.jpg') ?>" alt="">
             <div class="card-body">
                 <h5 class="card-title">
                     Rangkaian BMKG Goes to School Kabupaten Buleleng 5-6 September 2023
@@ -536,8 +700,7 @@
                     serta simulasi.
                 </p>
 
-                <a href="<?php echo base_url('artikel/20230905') ?>"
-                    class="btn btn-primary btn-sm">Selengkapnya</a>
+                <a href="<?php echo base_url('artikel/20230905') ?>" class="btn btn-primary btn-sm">Selengkapnya</a>
             </div>
         </div>
     </div>
