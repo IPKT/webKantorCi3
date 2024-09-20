@@ -1,4 +1,4 @@
-<?php print_r($pd);
+<?php
 $pd = explode("PERINGATAN DINI CUACA" , $pd);
 $pd = $pd[1];
 $nomor = explode("NOMOR " , $pd);
@@ -46,33 +46,29 @@ echo $prakiraan;
 
 $isi =
 "<?xml version=\"1.0\" encoding=\"US-ASCII\" standalone=\"yes\"?>
-<!DOCTYPE peringatanDini [
-<!ELEMENT  peringatanDini EMPTY>
-<!ATTLIST peringatanDini
-  nomor 		ID	#REQUIRED
-  mulai		CDATA	#REQUIRED
-  akhir		CDATA	#REQUIRED
-  pengamatan    CDATA	#REQUIRED
-  peringatan    CDATA   #REQUIRED
-  prakiraan     CDATA   #REQUIRED
->
-]>
-<peringatanDini nomor=\"$nomor\" mulai=\"$mulai\" akhir=\"$akhir\" pengamatan=\"$pengamatan\" peringatan=\"$peringatan\" prakiraan=\"$prakiraan\" />";
+<!DOCTYPE peringatanDini [ <!ELEMENT peringatanDini EMPTY>
+<!ATTLIST peringatanDini nomor ID #REQUIRED mulai CDATA #REQUIRED akhir CDATA #REQUIRED pengamatan CDATA #REQUIRED
+    peringatan CDATA #REQUIRED prakiraan CDATA #REQUIRED>
+    ]>
+    <peringatanDini nomor=\"$nomor\" mulai=\"$mulai\" akhir=\"$akhir\" pengamatan=\"$pengamatan\"
+        peringatan=\"$peringatan\" prakiraan=\"$prakiraan\" />";
 
 
-//$buka = fopen("home/sysop/Music/event.xml", "w+");
-$fileXML = base_url('gambar/event.xml');
-$buka = fopen('PeringatanDini.xml','w');
-if (!$buka)
-{
-echo "<p><b>Data belum terproses. Mohon dicoba lagi</b><p><html>";
-exit;
-}
+    //$buka = fopen("home/sysop/Music/event.xml", "w+");
+    $fileXML = base_url('gambar/event.xml');
+    $buka = fopen('PeringatanDini.xml','w');
+    if (!$buka)
+    {
+    echo "<p><b>Data belum terproses. Mohon dicoba lagi</b>
+    <p>
+        <html>";
+        exit;
+        }
 
-fwrite($buka, $isi);
-fclose($buka);
+        fwrite($buka, $isi);
+        fclose($buka);
 
-$url = base_url('PeringatanDini.xml');
-header("Location: $url");
+        $url = base_url('PeringatanDini.xml');
+        header("Location: $url");
 
-?>
+        ?>

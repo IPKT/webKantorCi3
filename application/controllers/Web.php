@@ -154,20 +154,20 @@ class Web extends CI_Controller {
 
 	//input Page Peringatan Dini Ngurah Rai
 	public function inputPD(){
-		if (
-			$this->session->userdata('username') == null
-			) {
-			   redirect('auth/login_page');
-			}
+		// if (
+		// 	$this->session->userdata('username') == null
+		// 	) {
+		// 	   redirect('auth/login_page');
+		// 	}
 		$this->load->view('petir/inputPeringatanDini',false);	
 	}
 
 	public function prosesDataPD(){
-		if (
-			$this->session->userdata('username') == null
-			) {
-			   redirect('auth');
-			}
+		// if (
+		// 	$this->session->userdata('username') == null
+		// 	) {
+		// 	   redirect('auth');
+		// 	}
 		// $pd = $this->input->post('peringatanDini');
 		// $pd = explode("PERINGATAN DINI CUACA" , $pd)[1];
 		// $nomor = explode("NOMOR " , $pd)[1];
@@ -221,41 +221,39 @@ class Web extends CI_Controller {
 
 		$isi =
 		"<?xml version=\"1.0\" encoding=\"US-ASCII\" standalone=\"yes\"?>
-		<!DOCTYPE peringatanDini [
-		<!ELEMENT  peringatanDini EMPTY>
-		<!ATTLIST peringatanDini
-		nomor 		ID	#REQUIRED
-		mulai		CDATA	#REQUIRED
-		akhir		CDATA	#REQUIRED
-		pengamatan    CDATA	#REQUIRED
-		peringatan    CDATA   #REQUIRED
-		prakiraan     CDATA   #REQUIRED
-		>
-		]>
-		<peringatanDini nomor=\"$nomor\" mulai=\"$mulai\" akhir=\"$akhir\" pengamatan=\"$pengamatan\" peringatan=\"$peringatan\" prakiraan=\"$prakiraan\" />";
+<!DOCTYPE peringatanDini [ <!ELEMENT peringatanDini EMPTY>
+<!ATTLIST peringatanDini nomor ID #REQUIRED mulai CDATA #REQUIRED akhir CDATA #REQUIRED pengamatan CDATA #REQUIRED
+    peringatan CDATA #REQUIRED prakiraan CDATA #REQUIRED>
+    ]>
+    <peringatanDini nomor=\"$nomor\" mulai=\"$mulai\" akhir=\"$akhir\" pengamatan=\"$pengamatan\"
+        peringatan=\"$peringatan\" prakiraan=\"$prakiraan\" />";
 
 
-		//$buka = fopen("home/sysop/Music/event.xml", "w+");
-		$fileXML = base_url('gambar/event.xml');
-		$buka = fopen('PeringatanDini.xml','w');
-		if (!$buka)
-		{
-		echo "<p><b>Data belum terproses. Mohon dicoba lagi</b><p><html>";
-		exit;
-		}
+    //$buka = fopen("home/sysop/Music/event.xml", "w+");
+    $fileXML = base_url('gambar/event.xml');
+    $buka = fopen('PeringatanDini.xml','w');
+    if (!$buka)
+    {
+    echo "<p><b>Data belum terproses. Mohon dicoba lagi</b>
+    <p>
+        <html>";
+        exit;
+        }
 
-		fwrite($buka, $isi);
-		fclose($buka);
+        fwrite($buka, $isi);
+        fclose($buka);
 
-		// $this->load->view('petir/prosesPD',$data,false);	
-		// $url = base_url('PeringatanDini.xml');
-		// header("Location: $url");
+        // $this->load->view('petir/prosesPD',$data,false);
+        // $url = base_url('PeringatanDini.xml');
+        // header("Location: $url");
 
-		redirect('auth/logout');
-	}
+        // redirect('auth/logout');
+        $url = base_url('PeringatanDini.xml');
+        header("Location: $url");
+        }
 
 
 
 
 
-}
+        }
