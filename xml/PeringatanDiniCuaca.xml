@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PeringatanDini jenis="cuaca">
+  <Nomor>1</Nomor>
+  <Mulai>25 APRIL 2024 JAM 16.28 WITA</Mulai>
+  <Akhir>25 APRIL 2024 JAM 17.28 WITA</Akhir>
+  <Pengamatan>16.28 WITA</Pengamatan>
+  <Peringatan>TERJADI BADAI GUNTUR. DIPRAKIRAKAN INTENSITAS TETAP.</Peringatan>
+  <Sandi>WADD AD WRNG 1 VALID 250828/250928 TS OBS AT 0828Z NC&#13;
+&#13;
+</Sandi>
+</PeringatanDini>

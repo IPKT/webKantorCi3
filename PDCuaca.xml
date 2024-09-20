@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<peringatanDini jenis="cuaca">
+  <Nomor>1</Nomor>
+  <Mulai>24 APRIL 2024 JAM 15.11 WITA</Mulai>
+  <Akhir>24 APRIL 2024 JAM 16.11 WITA</Akhir>
+  <Pengamatan>15.11 WITA</Pengamatan>
+  <Peringatan>TERJADI BADAI GUNTUR</Peringatan>
+</peringatanDini>

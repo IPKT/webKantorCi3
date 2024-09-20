@@ -10,28 +10,19 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-        <title>Geofisika Denpasar</title>
-        <link rel="icon" type="image/x-icon" href="<?php echo  base_url('gambar/logo bmkg.png') ?>">
+    <title>Geofisika Denpasar</title>
+    <link rel="icon" type="image/x-icon" href="<?php echo  base_url('gambar/logo bmkg.png') ?>">
 </head>
 
 <body>
-   <div class="container mt-5">
-   <?php echo form_open_multipart('web/prosesDataPD')?>
-   <form>
-        <div class="mb-3">
-            <label for="PeringaranDini" class="form-label">Peringatan Dini Cuaca</label>
-            <textarea class="form-control textAreaMultiline" name="peringatanDini" rows="8"
-            placeholder="Masukan Narasi Peringatan Dini Cuaca "></textarea>
-        </div>
-        <div class="mb-3">
-            <label for="PeringaranDini" class="form-label">Peringatan Dini (Wind Shear)</label>
-            <textarea class="form-control textAreaMultiline" name="windShear" rows="8"
-            placeholder="Masukan Peringatan Dini Wind Shear "></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
-    <?php echo form_close()?>
-   </div>
+    <div class="container mt-5">
+        <h2>XML Berhasil Terbentuk</h2>
+        <?php $baseurl = base_url();?>
+        <a class='btn btn-primary'
+            onclick="openXML('<?php echo $baseurl; ?>')">
+            Lihat File XML</a>
+
+    </div>
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
@@ -44,6 +35,14 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
     -->
+
+    <script>
+    function openXML(baseurl) {
+            window.open(baseurl+"xml/PeringatanDiniCuaca.xml");
+            window.location.assign(baseurl+"xml/PeringatanDiniWindShear.xml");
+
+    }
+    </script>
 </body>
 
 </html>

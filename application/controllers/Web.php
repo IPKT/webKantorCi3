@@ -26,6 +26,7 @@ class Web extends CI_Controller {
 		$this->load->view('layout/template_beranda',$data,false);	
 	}
 
+	//BERANDA
 	public function beranda(){
 		$data = array(
 			'page' => 'profil/beranda',
@@ -102,7 +103,7 @@ class Web extends CI_Controller {
 		$this->load->view('layout/template',$data,false);	
 	}
 
-	// Publikasi
+	// PUBLIKASI
 	public function buletin(){
 		$data = array(
 			'page' => 'publikasi/buletin',
@@ -152,54 +153,60 @@ class Web extends CI_Controller {
 		echo "hahaha";
     }
 
-	//input Page Peringatan Dini Ngurah Rai
+	//INPUT PAGE PERINGATAN DINI
 	public function inputPD(){
-		// if (
-		// 	$this->session->userdata('username') == null
-		// 	) {
-		// 	   redirect('auth/login_page');
-		// 	}
 		$this->load->view('petir/inputPeringatanDini',false);	
 	}
 
-	public function prosesDataPD(){
-		// if (
-		// 	$this->session->userdata('username') == null
-		// 	) {
-		// 	   redirect('auth');
-		// 	}
-		// $pd = $this->input->post('peringatanDini');
-		// $pd = explode("PERINGATAN DINI CUACA" , $pd)[1];
-		// $nomor = explode("NOMOR " , $pd)[1];
-		// $nomor = explode("," , $nomor)[0];
-		// $mulai = explode("BERLAKU TANGGAL  " , $pd)[1];
-		// $mulai = explode(" SAMPAI DENGAN " , $mulai)[0];
+	public function createXmlCuaca(){
+		$nomor = "1";
+		$mulai = "24 APRIL 2024 JAM 15.11 WITA";
+		$akhir = "24 APRIL 2024 JAM 16.11 WITA";
+		$pengamatan = "15.11 WITA";
+		$peringatan = "TERJADI BADAI GUNTUR";
 
-		// $akhir = explode("SAMPAI DENGAN " , $pd)[1];
-		// $akhir = explode(". BERDASARKAN" , $akhir)[0];
+		$dom = new DOMDocument();
+		$dom->encoding = 'utf-8';
+		$dom->xmlVersion = '1.0';
+		$dom->formatOutput = true;
+		$xml_file_name = 'PDCuaca.xml';
+		$root = $dom->createElement('peringatanDini');
+		$attr_root = new DOMAttr('jenis', 'cuaca');
+		$root->setAttributeNode($attr_root);
+		$nomor_node = $dom->createElement('Nomor', $nomor);
+		$root->appendChild($nomor_node);
+		$mulai_node = $dom->createElement('Mulai', $mulai);
+		$root->appendChild($mulai_node);
+		$akhir_node = $dom->createElement('Akhir', $akhir);
+		$root->appendChild($akhir_node);
+		$pengamatan_node = $dom->createElement('Pengamatan', $pengamatan);
+		$root->appendChild($pengamatan_node);
+		$peringatan_node = $dom->createElement('Peringatan', $peringatan);
+		$root->appendChild($peringatan_node);
+		$dom->appendChild($root);
+		$dom->save("xml/".$xml_file_name);
+		echo "$xml_file_name has been successfully created";
+	}
 
-		// $pengamatan = explode("PENGAMATAN JAM " , $pd)[1];
-		// $pengamatan = explode("," , $pengamatan)[0];
-
-		// $peringatan = explode($pengamatan.", " , $pd)[1];
-		// $peringatan = explode("." , $peringatan)[0];
-
-		// $prakiraan = explode($peringatan.". " , $pd)[1];
-		// $prakiraan = explode("." , $prakiraan)[0];
+	public function prosesPDCuaca(){
 		$pd = $this->input->post('peringatanDini');
 		$pd = explode("PERINGATAN DINI CUACA" , $pd);
+		$sandi= $pd[0];
 		$pd = $pd[1];
+		if ($pd == NULL) {
+			return "gagal";
+		}
 		$nomor = explode("NOMOR " , $pd);
 		$nomor = $nomor[1];
 		$nomor = explode("," , $nomor);
 		$nomor = $nomor[0];
 		$mulai = explode("BERLAKU TANGGAL  " , $pd);
 		$mulai = $mulai[1];
-		$mulai = explode(" SAMPAI DENGAN " , $mulai);
+		$mulai = explode(" SAMPAI DENGAN  " , $mulai);
 		$mulai = $mulai[0];
 
 
-		$akhir = explode("SAMPAI DENGAN " , $pd);
+		$akhir = explode("SAMPAI DENGAN  " , $pd);
 		$akhir = $akhir[1];
 		$akhir = explode(". BERDASARKAN" , $akhir);
 		$akhir = $akhir[0];
@@ -211,46 +218,133 @@ class Web extends CI_Controller {
 
 		$peringatan = explode($pengamatan.", " , $pd);
 		$peringatan = $peringatan[1];
-		$peringatan = explode("." , $peringatan);
+		$peringatan = explode(". " , $peringatan);
+		$prakiraan = $peringatan[1];
 		$peringatan = $peringatan[0];
 
-		$prakiraan = explode($peringatan.". " , $pd);
-		$prakiraan = $prakiraan[1];
-		$prakiraan = explode("." , $prakiraan);
-		$prakiraan = $prakiraan[0];
+		$dom = new DOMDocument();
+		$dom->encoding = 'utf-8';
+		$dom->xmlVersion = '1.0';
+		$dom->formatOutput = true;
+		$xml_file_name = 'PeringatanDiniCuaca.xml';
+		$root = $dom->createElement('PeringatanDini');
+		$attr_root = new DOMAttr('jenis', 'cuaca');
+		$root->setAttributeNode($attr_root);
+		$nomor_node = $dom->createElement('Nomor', $nomor);
+		$root->appendChild($nomor_node);
+		$mulai_node = $dom->createElement('Mulai', $mulai);
+		$root->appendChild($mulai_node);
+		$akhir_node = $dom->createElement('Akhir', $akhir);
+		$root->appendChild($akhir_node);
+		$pengamatan_node = $dom->createElement('Pengamatan', $pengamatan);
+		$root->appendChild($pengamatan_node);
+		$peringatan_node = $dom->createElement('Peringatan', $peringatan);
+		$root->appendChild($peringatan_node);
+		$prakiraan_node = $dom->createElement('Prakiraan', $prakiraan);
+		$root->appendChild($prakiraan_node);
+		$sandi_node = $dom->createElement('Sandi', $sandi);
+		$root->appendChild($sandi_node);
+		$dom->appendChild($root);
+		$dom->save("xml/".$xml_file_name);
+		return "sukses";
+		
+		
 
-		$isi =
-		"<?xml version=\"1.0\" encoding=\"US-ASCII\" standalone=\"yes\"?>
-<!DOCTYPE peringatanDini [ <!ELEMENT peringatanDini EMPTY>
-<!ATTLIST peringatanDini nomor ID #REQUIRED mulai CDATA #REQUIRED akhir CDATA #REQUIRED pengamatan CDATA #REQUIRED
-    peringatan CDATA #REQUIRED prakiraan CDATA #REQUIRED>
-    ]>
-    <peringatanDini nomor=\"$nomor\" mulai=\"$mulai\" akhir=\"$akhir\" pengamatan=\"$pengamatan\"
-        peringatan=\"$peringatan\" prakiraan=\"$prakiraan\" />";
+	}
+
+	public function prosesPDWindShear(){
+		$ws = $this->input->post('windShear');
+		$ws = explode("PERINGATAN DINI", $ws);
+		$sandi= $ws[0];
+		$ws = $ws[1];
+		if ($ws == NULL) {
+			return "gagal";
+		}
+		$nomor = explode("NOMOR " , $ws);
+		$nomor = $nomor[1];
+		$nomor = explode("," , $nomor);
+		$nomor = $nomor[0];
+		$mulai = explode("BERLAKU TANGGAL  " , $ws);
+		$mulai = $mulai[1];
+		$mulai = explode(" SAMPAI DENGAN  " , $mulai);
+		$mulai = $mulai[0];
+	
+		$akhir = explode("SAMPAI DENGAN  " , $ws);
+		$akhir = $akhir[1];
+		$akhir = explode(". BERDASARKAN" , $akhir);
+		$akhir = $akhir[0];
+
+		
+		$pengamatan = explode("PENGAMATAN JAM " , $ws);
+		$pengamatan = $pengamatan[1];
+		$pengamatan = explode("," , $pengamatan);
+		$pengamatan = $pengamatan[0];
+
+		$peringatan = explode($pengamatan.", " , $ws);
+		$peringatan = $peringatan[1];
+
+		$dom = new DOMDocument();
+		$dom->encoding = 'utf-8';
+		$dom->xmlVersion = '1.0';
+		$dom->formatOutput = true;
+		$xml_file_name = 'PeringatanDiniWindShear.xml';
+		$root = $dom->createElement('PeringatanDini');
+		$attr_root = new DOMAttr('jenis', 'windShear');
+		$root->setAttributeNode($attr_root);
+		$nomor_node = $dom->createElement('Nomor', $nomor);
+		$root->appendChild($nomor_node);
+		$mulai_node = $dom->createElement('Mulai', $mulai);
+		$root->appendChild($mulai_node);
+		$akhir_node = $dom->createElement('Akhir', $akhir);
+		$root->appendChild($akhir_node);
+		$pengamatan_node = $dom->createElement('Pengamatan', $pengamatan);
+		$root->appendChild($pengamatan_node);
+		$peringatan_node = $dom->createElement('Peringatan', $peringatan);
+		$root->appendChild($peringatan_node);
+		$sandi_node = $dom->createElement('Sandi', $sandi);
+		$root->appendChild($sandi_node);
+		$dom->appendChild($root);
+		$dom->save("xml/".$xml_file_name);
+		return "sukses";
+	}
 
 
-    //$buka = fopen("home/sysop/Music/event.xml", "w+");
-    $fileXML = base_url('gambar/event.xml');
-    $buka = fopen('PeringatanDini.xml','w');
-    if (!$buka)
-    {
-    echo "<p><b>Data belum terproses. Mohon dicoba lagi</b>
-    <p>
-        <html>";
-        exit;
-        }
+	public function prosesDataPD(){
+		$status_pd_cuaca = "";
+		$status_pd_ws = "";
+		// PROSES PERINGATAN DINI CUACA
+		
+		
+		if ($this->input->post('peringatanDini') != NULL) {
+			try {
+				
+				$status_pd_cuaca = $this->prosesPDCuaca();
+			} catch (Exception $error) {
+				$status_pd_cuaca = "gagal";
+			}
 
-        fwrite($buka, $isi);
-        fclose($buka);
+					}
 
-        // $this->load->view('petir/prosesPD',$data,false);
-        // $url = base_url('PeringatanDini.xml');
-        // header("Location: $url");
+		// PROSES WINDSHEAR
+		if ($this->input->post("windShear") != NULL) {
 
-        // redirect('auth/logout');
-        $url = base_url('PeringatanDini.xml');
-        header("Location: $url");
-        }
+			try {
+				
+				$status_pd_ws = $this->prosesPDWindShear();
+			} catch (Exception $error) {
+				echo 'Message: ' .$e->getMessage();
+			}
+			
+		}
+
+		if ($status_pd_cuaca == "sukses" || $status_pd_ws =="sukses") {
+			$this->load->view('petir/showXml',false);	
+			
+		}else{
+			echo "XML gagal diproses silahkan cek format ";
+		}
+
+	}
 
 
 
