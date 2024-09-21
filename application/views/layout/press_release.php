@@ -5,15 +5,13 @@
     <div class="content-body">
         <div class="card mb-2">
             <div class="card-body">
-                <h5 class="card-title">BMKG Denpasar melaksanakan SLG di wilayah Kusamba
+                <h5 class="card-title">Gempabumi M 4,8 Dirasakan Di Gianyar -
+                    Bali
                 </h5>
-                <p class="card-text">Wilayah Kusamba merupakan wilayah yang rawan terhadap bencana gempabumi dan
-                    tsunami. Berdasarkan catatan historis tsunami, wilayah Kusamba sudah empat kali diterjang tsunami.
-                    Kejadian diawali dari tsunami tahun 1815 dan 1917 yang dikenal sebagai Gejer Bali I dan II dimana
-                    menimbulkan banyak korban jiwa. Selanjutnya tahun 1977 merupakan tsunami kiriman dari Selatan
-                    Sumbawa. Selain itu, tsunami Banyuwangi tahun 1994 disebabkan oleh megathrust Selatan Banyuwangi....
-                </p>
-                <a href="<?php echo base_url('artikel/20240626') ?>" class="btn btn-primary btn-sm">Selengkapnya</a>
+                <p class="card-text">Sabtu, 21 September 2024 pukul 07.26.20 WITA, wilayah
+                    Gianyar diguncang gempabumi tektonik. Hasil analisa BMKG menunjukkan bahwa gempabumi ini berkekuatan
+                    M=4,8.....</p>
+                <a href="<?php echo base_url('artikel/20240921_1') ?>" class="btn btn-primary btn-sm">Selengkapnya</a>
             </div>
         </div>
         <div class="card mb-2">

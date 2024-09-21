@@ -6,6 +6,22 @@
     </div>
 
     <div class="card-body p-2">
+        <!-- 21 September 2024 -->
+
+        <div class="card my-2">
+            <img width="50%" class="card-img-top"
+                src="<?php echo  base_url('gambar/artikel/artikel_20240921_1_1.jpeg') ?>" alt="">
+            <div class="card-body">
+                <h5 class="card-title">Gempabumi M 4,8 Dirasakan Di Gianyar -
+                    Bali
+                </h5>
+                <p class="card-text"> Sabtu, 21 September 2024 pukul 07.26.20 WITA, wilayah Gianyar diguncang gempabumi
+                    tektonik. Hasil analisa BMKG
+                    menunjukkan bahwa gempabumi ini berkekuatan M=4,8. .... </p>
+                <a href="<?php echo base_url('artikel/20240921_1') ?>" class="btn btn-primary btn-sm">Selengkapnya</a>
+            </div>
+        </div>
+
         <!-- 20 September 2024 -->
 
         <div class="card my-2">
