@@ -7,7 +7,7 @@
     <br>
 
     <p>Berdasarkan peta kerapatan sambaran petir wilayah Bali periode 20-26 September 2024, aktivitas petir terjadi di
-        wilayah Bali dengan termasuk dalam kategori Rendah < 8. Kelistrikan udara yang terjadi sebanyak 15719 sambaran
+        wilayah Bali dengan termasuk dalam kategori Rendah < 8 sampai dengan tinggi > 16. Kelistrikan udara yang terjadi sebanyak 15719 sambaran
             (Strike) yang terbagi atas 3698 CG+ (Cloud to Ground +), 10082 CG- (Cloud to Ground -) dan 1939 IC
             (Intra-Cloud). </p>
 
