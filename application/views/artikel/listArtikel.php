@@ -6,6 +6,23 @@
     </div>
 
     <div class="card-body p-2">
+        <!-- 27 September 2024 -->
+        <div class="card my-2">
+            <img width="50%" class="card-img-top"
+                src="<?php echo  base_url('gambar/artikel/artikel_20240927_3_1.png') ?>" alt="">
+            <div class="card-body">
+                <h5 class="card-title">Informasi Sambaran Petir di Wilayah Bali Periode 20-26 September 2024
+                </h5>
+                <p class="card-text">
+                    Berdasarkan peta kerapatan sambaran petir wilayah Bali periode 20-26 September 2024, aktivitas petir
+                    terjadi di wilayah Bali dengan termasuk dalam kategori Rendah < 8....</p>
+
+                        <a href="<?php echo base_url('artikel/20240927_3') ?>"
+                            class="btn btn-primary btn-sm">Selengkapnya</a>
+            </div>
+        </div>
+
+
         <!-- 21 September 2024 -->
 
         <div class="card my-2">

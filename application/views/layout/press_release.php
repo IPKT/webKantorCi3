@@ -3,6 +3,17 @@
         <h5>Press Release / Artikel </h5>
     </div>
     <div class="content-body">
+    <div class="card mb-2">
+            <div class="card-body">
+                <h5 class="card-title">Sambaran Petir di Wilayah Bali Periode 20 - 26 September 2024
+                </h5>
+                <p class="card-text">
+                    Berdasarkan peta kerapatan sambaran petir wilayah Bali periode 20 - 26 September 2024, aktivitas
+                    petir terjadi di wilayah Bali dengan termasuk dalam kategori Rendah < 8. .... </p>
+                        <a href="<?php echo base_url('artikel/20240927_3') ?>"
+                            class="btn btn-primary btn-sm">Selengkapnya</a>
+            </div>
+        </div>
         <div class="card mb-2">
             <div class="card-body">
                 <h5 class="card-title">Gempabumi M 4,8 Dirasakan Di Gianyar -
@@ -34,7 +45,7 @@
                 <a href="<?php echo base_url('artikel/20240920_2') ?>" class="btn btn-primary btn-sm">Selengkapnya</a>
             </div>
         </div>
-        <div class="card mb-2">
+        <!-- <div class="card mb-2">
             <div class="card-body">
                 <h5 class="card-title">Sambaran Petir di Wilayah Bali Periode 13 - 19 September 2024
                 </h5>
@@ -43,15 +54,6 @@
                     petir terjadi di wilayah Bali dengan termasuk dalam kategori Rendah < 8. .... </p>
                         <a href="<?php echo base_url('artikel/20240920_3') ?>"
                             class="btn btn-primary btn-sm">Selengkapnya</a>
-            </div>
-        </div>
-        <!-- <div class="card mb-2">
-            <div class="card-body">
-                <h5 class="card-title">Simulasi Kesiapsiagaan Gempabumi dan Tsunami ITDC</h5>
-                <p class="card-text">Berdasarkan Undang-Undang Nomor 24 Tahun 2007 tentang Penanggulangan Bencana,
-                    maka tanggal 26 April 2023 ditetapkan sebagai Hari Kesiapsiagaan Bencana Nasional (HKBN). .....
-                </p>
-                <a href="<?php echo base_url('artikel/20230427') ?>" class="btn btn-primary btn-sm">Selengkapnya</a>
             </div>
         </div> -->
     </div>
